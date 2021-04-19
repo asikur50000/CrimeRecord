@@ -21,7 +21,7 @@
                 <th scope="col">Police Station</th>
                 <th scope="col">Criminal Name</th>
                 <th scope="col">Mobile Number</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Action</th>
                
                
             </tr>

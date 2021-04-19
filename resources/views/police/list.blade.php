@@ -24,8 +24,8 @@
                 <th scope="col">Mobile</th>
                 <th scope="col">Address</th>
                
-                <th scope="col">Actions</th>
-               
+                <th scope="col">Action</th>
+                
                
             </tr>
             </thead>
@@ -34,7 +34,7 @@
 
             <tr>
                 <th scope="row">{{ $key+1 }}</th>
-                <td>{{$police->policestation}}</td>
+                <td>{{optional($police->policestation)->name}}</td>
                 <td>{{$police->policename}}</td>
                 <td>{{$police->email}}</td>
                 <td>{{$police->mobile}}</td>

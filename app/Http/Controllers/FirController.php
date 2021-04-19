@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 use App\Models\Fir;
+use App\Models\Station;
+use App\Models\Category;
 
 use Illuminate\Http\Request;
 
 class FirController extends Controller
 {
     public function showForm()
-    {
-        return view('fir.form');
+    {   
+        
+        $categorys = Category :: all();
+        $stations = Station :: all();
+        return view('fir.form',compact('categorys','stations'));
     }
     public function storeForm(Request $request)
     {

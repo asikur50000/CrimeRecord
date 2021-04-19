@@ -20,7 +20,7 @@
                 <th scope="col">Serial No.</th>
                 <th scope="col">Category Name</th>
                 <th scope="col">Description</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Action</th>
                
                
             </tr>

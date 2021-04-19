@@ -7,5 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Fir extends Model
 {
-    use HasFactory;
+    protected $guarded = [];
+    public function station()
+    {
+        return $this -> belongsTo(Station::class);
+    }
+    
+    public function category()
+    {
+        return $this -> belongsTo(Category::class);
+    }
 }

@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class police extends Model
 {
-    use HasFactory;
+    protected $guarded = [];
+    public function station(){
+        return $this -> belongsTo(Station::class,'station_id','id');
+    }
+
+
 }

@@ -3,7 +3,7 @@
 
 <div class='container'>
   
-  <h3>New FIR Form</h3>
+  <h2>New FIR Form</h2>
 
 
 <!--alert message-->
@@ -22,15 +22,26 @@
 <form method="post" action="{{route('fir.store')}}">
 @csrf
 
-  <div class="form-group">
-    <label for="policestation">*Police Station</label>
-    <input type="text" name="policestation" class="form-control" id="policestation" placeholder="">
-  </div>
+<div class="form-group">
+  <label for="policestation">Police Station</label>
+  <select class="form-control" name="policestation" id="policestation">
+    <option selected>Choose...</option>
+      @foreach ($stations as $station)
+      <option value="{{$station->id}}">{{$station->name}}</option>
+      @endforeach
+  </select>
+</div>
+</head>
 
-  <div class="form-group">
-    <label for="crimetype">*Crime Type</label>
-    <input type="text" name="crimetype" class="form-control" id="crimetype" placeholder="">
-  </div>
+<div class="form-group">
+  <label for="crimetype">*Crime Type</label>
+  <select class="form-control" name="crimetype" id="crimetype">
+    <option selected>Choose...</option>
+      @foreach ($categorys as $category)
+      <option value="{{$category->id}}">{{$category->categoryname}}</option>
+      @endforeach
+  </select>
+</div>
 
   <div class="form-group">
     <label for="nameofaccused">*Name of Accused</label>
@@ -39,7 +50,7 @@
 
 
   
-    <h2>Applicant's Details(Victim)</h2>
+    <h4>Applicant's Details(Victim)</h4>
 
   
   <div class="form-group">

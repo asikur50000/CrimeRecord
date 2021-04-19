@@ -35,10 +35,18 @@
     <label for="criminaldateofbirth">*Criminal Date of Birth</label>
     <input type="date" name="criminaldateofbirth" class="form-control" id="criminaldateofbirth" placeholder="">
   </div>
+
+
   <div class="form-group">
     <label for="crimetype">*Crime Type</label>
-    <input type="text" name="crimetype" class="form-control" id="crimetype" placeholder="">
+    <select class="form-control" name="crimetype" id="crimetype">
+      <option selected>Choose...</option>
+        @foreach ($categorys as $category)
+        <option value="{{$category->id}}">{{$category->categoryname}}</option>
+        @endforeach
+    </select>
   </div>
+
   <div class="form-group">
     <label for="crimetime">*Crime Time</label>
     <input type="text" name="crimetime" class="form-control" id="crimetime" placeholder="">
@@ -53,12 +61,18 @@
     <input type="number" name="zipcode" class="form-control" id="zipcode" placeholder="">
   </div>
   <div class="form-group">
-    <label for="crimecity">*Crime City</label>
+    <label for="crimecity">*Crime Area/City</label>
     <input type="text" name="crimecity" class="form-control" id="crimecity" placeholder="">
   </div>
+
   <div class="form-group">
-    <label for="policestation">*Police Station</label>
-    <input type="text" name="policestation" class="form-control" id="policestation" placeholder="">
+    <label for="policestation">Police Station</label>
+    <select class="form-control" name="policestation" id="policestation">
+      <option selected>Choose...</option>
+        @foreach ($stations as $station)
+        <option value="{{$station->id}}">{{$station->name}}</option>
+        @endforeach
+    </select>
   </div>
 
   

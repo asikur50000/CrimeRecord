@@ -27,6 +27,7 @@
     <input type="text" name="policestation" class="form-control" id="policestation" value="{{ $police->policestation }}" placeholder="">
   </div>
 
+
   <div class="form-group">
     <label for="policename">*Police Name</label>
     <input type="text" name="policename" class="form-control" id="policename" value="{{ $police->policename }}" placeholder="">

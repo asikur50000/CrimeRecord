@@ -23,8 +23,13 @@
 @csrf
 
   <div class="form-group">
-    <label for="policestation">*Police Station</label>
-    <input type="text" name="policestation" class="form-control" id="policestation" placeholder="">
+    <label for="policestation">Police Station</label>
+    <select class="form-control" name="policestation" id="policestation">
+      <option selected>Choose...</option>
+        @foreach ($stations as $station)
+        <option value="{{$station->id}}">{{$station->name}}</option>
+        @endforeach
+    </select>
   </div>
 
   <div class="form-group">

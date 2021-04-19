@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 use App\Models\Criminal;
+use App\Models\Category;
+use App\Models\Station;
 
 use Illuminate\Http\Request;
 
 class CriminalController extends Controller
 {
     public function showForm()
-    {
-        return view('criminal.form');
+    {   $categorys = Category :: all();
+        $stations = Station :: all();
+        return view('criminal.form',compact('categorys','stations'));
     }
     public function storeForm(Request $request)
     {

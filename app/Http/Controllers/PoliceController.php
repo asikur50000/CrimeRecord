@@ -2,20 +2,22 @@
 
 namespace App\Http\Controllers;
 use App\Models\Police;
+use App\Models\Station;
 
 use Illuminate\Http\Request;
 
 class PoliceController extends Controller
 {
     public function showForm()
-    {
-        return view('police.form');
+    { 
+        $stations = Station::all();
+        return view('police.form',compact('stations'));
     }
     public function storeForm(Request $request)
     {
            //dd($request->all());
            $polices = new Police();
-           $polices->policestation = $request->policestation;
+           $polices->station_id = $request->policestation;
            $polices->policename = $request->policename;
            $polices->email = $request->email;
            $polices->mobile = $request->mobile;

@@ -36,22 +36,30 @@ Route::get('/', function () {
 
 
 
+//Route for station processing
+
 
 Route::get('station/form',[StationController::class,'showForm'])->name('station.form');
 Route::post('station/store',[StationController::class,'storeForm'])->name('station.store');
 Route::get('station/list',[StationController::class,'showList'])->name('station.list');
 
 
+//Route for police processing
+
 
 Route::get('police/form',[PoliceController::class,'showForm'])->name('police.form');
 Route::post('police/store',[PoliceController::class,'storeForm'])->name('police.store');
 Route::get('police/list',[PoliceController::class,'showList'])->name('police.list');
+
+//Route for Category processing
 
 
 Route::get('category/form',[CategoryController::class,'showForm'])->name('category.form');
 Route::post('category/store',[CategoryController::class,'storeForm'])->name('category.store');
 Route::get('category/list',[CategoryController::class,'showList'])->name('category.list');
 
+
+//Route for Criminial processing
 
 
 Route::get('criminal/form',[CriminalController::class,'showForm'])->name('criminal.form');
@@ -60,11 +68,16 @@ Route::get('criminal/list',[CriminalController::class,'showList'])->name('crimin
 
 
 //route dor FIR processing
+
+
 Route::get('fir/form',[FirController::class,'showForm'])->name('fir.form');
 Route::post('fir/store',[FirController::class,'storeForm'])->name('fir.store');
 Route::get('fir/list',[FirController::class,'showList'])->name('fir.list');
 
+
 //delete route
+
+
 Route::get('station/delete/{id}',[StationController::class,'deleteStation'])->name('delete.station');
 Route::get('police/delete/{id}',[PoliceController::class,'deletePolice'])->name('delete.police');
 Route::get('category/delete/{id}',[CategoryController::class,'deletecategory'])->name('delete.category');
@@ -74,6 +87,8 @@ Route::get('fir/delete/{id}',[FirController::class,'deletefir'])->name('delete.f
 
 
 //Edit and update route
+
+
 Route::get('station/form/{id}',[StationController::class,'editStation'])->name('edit.station');
 Route::post('station/form/{id}',[StationController::class,'updateStation'])->name('update.station');
 
