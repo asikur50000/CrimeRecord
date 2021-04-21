@@ -73,6 +73,7 @@ Route::get('criminal/list',[CriminalController::class,'showList'])->name('crimin
 Route::get('fir/form',[FirController::class,'showForm'])->name('fir.form');
 Route::post('fir/store',[FirController::class,'storeForm'])->name('fir.store');
 Route::get('fir/list',[FirController::class,'showList'])->name('fir.list');
+Route::get('fir/details',[FirController::class,'showDetails'])->name('fir.details');
 
 
 //delete route
@@ -100,3 +101,7 @@ Route::post('category/form/{id}',[CategoryController::class,'updateCategory'])->
 
 Route::get('criminal/form/{id}',[CriminalController::class,'editCriminal'])->name('edit.criminal');
 Route::post('criminal/form/{id}',[CriminalController::class,'updateCriminal'])->name('update.criminal');
+
+
+Route::post('fir/form/{id}',[FirController::class,'updateFir'])->name('update.fir');
+

@@ -31,10 +31,11 @@
       @endforeach
   </select>
 </div>
+
 </head>
 
 <div class="form-group">
-  <label for="crimetype">*Crime Type</label>
+  <label for="crimetype">Crime Type</label>
   <select class="form-control" name="crimetype" id="crimetype">
     <option selected>Choose...</option>
       @foreach ($categorys as $category)
@@ -44,7 +45,7 @@
 </div>
 
   <div class="form-group">
-    <label for="nameofaccused">*Name of Accused</label>
+    <label for="nameofaccused">Name of Accused</label>
     <input type="text" name="nameofaccused" class="form-control" id="nameofaccused" placeholder="">
   </div>
 
@@ -54,7 +55,7 @@
 
   
   <div class="form-group">
-    <label for="name">Name</label>
+    <label for="name"> Victim Name</label>
     <input type="text" name="name" class="form-control" id="name" placeholder="">
   </div>
   <div class="form-group">

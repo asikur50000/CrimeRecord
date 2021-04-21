@@ -28,6 +28,7 @@ class FirController extends Controller
            $firs->address = $request->address;
            //$firs->relationwithaccusedperson = $request->relationwithaccusedperson;
            $firs->email = $request->email;
+           //$firs->status = $request->status;
            $firs->purposeofapplyingfir = $request->purposeofapplyingfir;
            $firs->save();
            return redirect()->back()->with('message','Added Successfully');
@@ -38,12 +39,26 @@ class FirController extends Controller
          $firs = fir::paginate(5);
          return view('fir.list',compact('firs'));
     }
+    public function showDetails()
+    {
+        $firs = fir::paginate(5);
+         return view('fir.details',compact('firs'));
+    }
 
     //Delete method
     public function deleteFir($id)
     {
          Fir::find($id)->delete();
          return redirect()->back();
+    }
+
+    public function updateFir(Request $request,$id)
+    {
+        $firs = Fir::find($id);
+        $firs->status = $request->status;
+        $firs->remark = $request->remark;
+        $firs->save();
+        return redirect()->back();
     }
 
 

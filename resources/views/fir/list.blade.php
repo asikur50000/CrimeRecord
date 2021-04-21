@@ -16,18 +16,20 @@
     <div class="row">
         <table class="table">
             <thead>
-            <th>
+            
                 <th scope="col">FIR No.</th>
+                
                 <th scope="col">Police Station</th>
                 <th scope="col">Name</th>
                 <th scope="col">Mobile Number</th>
                 <th scope="col">Address</th>
                 <th scope="col">Email</th>
                 
+                
                 <th scope="col">Action</th>
                
                
-            </th>
+            
             </thead>
             <tbody>
                 @foreach($firs as $key => $fir)
@@ -39,6 +41,7 @@
                 <td>{{$fir->mobilenumber}}</td>
                 <td>{{$fir->address}}</td>
                 <td>{{$fir->email}}</td>
+               
                 
                 
                
@@ -46,7 +49,10 @@
                 
 
                 <td>
-                    <a class="btn btn-primary" href="">Edit</a>
+
+
+                   
+
                     <a class="btn btn-danger" onclick="return confirm('Are you sure?')"  href="{{ route('delete.fir',$fir->id) }}">Delete</a>
 
 

@@ -22,6 +22,8 @@ class CreateFirsTable extends Migration
             $table->string('mobilenumber');
             $table->string('address');
             $table->string('email');
+            $table->string('remark')->nullable();
+            $table->string('status',30)->default('Pending');
            // $table->string('relationwithaccusedperson');
             $table->string('purposeofapplyingfir');
             $table->timestamps();
