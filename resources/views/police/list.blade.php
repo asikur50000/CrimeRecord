@@ -34,7 +34,7 @@
 
             <tr>
                 <th scope="row">{{ $key+1 }}</th>
-                <td>{{optional($police->policestation)->name}}</td>
+                <td>{{$police->station->name}}</td>
                 <td>{{$police->policename}}</td>
                 <td>{{$police->email}}</td>
                 <td>{{$police->mobile}}</td>

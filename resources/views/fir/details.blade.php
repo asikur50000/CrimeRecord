@@ -16,10 +16,9 @@
     <div class="row">
         <table class="table">
             <thead>
-            
-                <th scope="col">FIR No.</th>
-                
-                <th scope="col">Police Station</th>
+               
+                <th scope="col">FIR No.</th> 
+                 <th scope="col">Police Station</th>
                 <th scope="col">Crime Type</th>
                 <th scope="col">Name of Accused</th>
                 <th scope="col">Victim Name</th>
@@ -39,7 +38,7 @@
                 @foreach($firs as $key => $fir)
 
             <tr>
-                <th scope="row">{{ $key+1 }}</th>
+                <th scope="row">{{ $key+2 }}</th>
                 <td>{{$fir->policestation}}</td>
                 <td>{{$fir->crimetype}}</td>
                 <td>{{$fir->nameofaccused}}</td>
