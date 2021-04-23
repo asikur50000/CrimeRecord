@@ -8,7 +8,7 @@
 .banner{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.521),rgba(0, 0, 0, 0.521)),url(img/police.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.521),rgba(0, 0, 0, 0.521)),url(../img/police.jpg);
     background-size: cover;
     background-position: center;
 
@@ -31,6 +31,7 @@
     margin: 0 20px;
     display: inline-block;
     position: relative;
+    
 }
 .navbar ul li a{
     text-decoration: none;
@@ -98,12 +99,16 @@ button:hover{
     background-color: darkcyan;
     
 }
-footer{
-    margin-top: -70px;
-    clear: both;
-    color: #009688;
+.projectname{
+    
+    color: #fff;
+    font-size: 16px;
+    padding-left: 100px;
     position: absolute;
-    height: 100px;
-    overflow: hidden;
-
+    
+    left:  7%;
+    top: 2%;
+    
+    
+    
 }
