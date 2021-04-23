@@ -31,7 +31,7 @@
 
             <tr>
                 <th scope="row">{{ $key+1 }}</th>
-                <td>{{$criminal->policestation}}</td>
+                <td>{{$criminal->station->name}}</td>
                 <td>{{$criminal->criminalname}}</td>
                 <td>{{$criminal->mobilenumber}}</td>
                 

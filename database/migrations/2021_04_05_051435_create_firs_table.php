@@ -15,8 +15,8 @@ class CreateFirsTable extends Migration
     {
         Schema::create('firs', function (Blueprint $table) {
             $table->id();
-            $table->string('policestation');
-            $table->string('crimetype');
+            $table->string('station_id');
+            $table->string('category_id');
             $table->string('nameofaccused');
             $table->string('name');
             $table->string('mobilenumber');

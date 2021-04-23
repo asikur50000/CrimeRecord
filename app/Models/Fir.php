@@ -10,11 +10,11 @@ class Fir extends Model
     protected $guarded = [];
     public function station()
     {
-        return $this -> belongsTo(Station::class);
+        return $this -> belongsTo(Station::class,'station_id','id');
     }
     
     public function category()
     {
-        return $this -> belongsTo(Category::class);
+        return $this -> belongsTo(Category::class,'category_id','id');
     }
 }

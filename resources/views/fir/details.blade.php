@@ -15,38 +15,42 @@
 
     <div class="row">
         <table class="table">
-            <thead>
+            <!--<thead>
                
-                <th scope="col">FIR No.</th> 
-                 <th scope="col">Police Station</th>
-                <th scope="col">Crime Type</th>
-                <th scope="col">Name of Accused</th>
-                <th scope="col">Victim Name</th>
-                <th scope="col">Purpose of Applying FIR</th>
-                <th scope="col">Mobile Number</th>
-                <th scope="col">Address</th>
-                <th scope="col">Email</th>
-                <th scope="col">Date of FIR</th>
-                <th scope="col">Status</th>
-                
-                <th scope="col">Action</th>
-               
+     
                
             
-            </thead>
+            </thead>-->
             <tbody>
                 @foreach($firs as $key => $fir)
 
             <tr>
-                <th scope="row">{{ $key+2 }}</th>
-                <td>{{$fir->policestation}}</td>
-                <td>{{$fir->crimetype}}</td>
+                <th scope="col">FIR No.</th> 
+                <th scope="row">{{ $key+1 }}</th>
+                <th scope="col">Police Station</th>
+                <td>{{$fir->station->name}}</td>
+                <th scope="col">Crime Type</th>
+                <td>{{$fir->category->categoryname}}</td>
+                
+            </tr>
+            <tr>
+                <th scope="col">Name of Accused</th>
                 <td>{{$fir->nameofaccused}}</td>
+                <th scope="col">Victim Name</th>
                 <td>{{$fir->name}}</td>
+                <th scope="col">Purpose of Applying FIR</th>
                 <td>{{$fir->purposeofapplyingfir}}</td>
+            </tr>
+            <tr>
+                <th scope="col">Mobile Number</th>
                 <td>{{$fir->mobilenumber}}</td>
+                <th scope="col">Address</th>
                 <td>{{$fir->address}}</td>
+                <th scope="col">Email</th>
                 <td>{{$fir->email}}</td>
+            </tr>
+            <tr>
+                <th scope="col">Date of FIR</th>
                 <td>
                     @if(isset($fir->created_at))
                     {{ $fir->created_at->format('d/m/Y')}}
@@ -54,20 +58,24 @@
                     {{'-'}}
                     @endif
                 </td>
-
+            
+            <th scope="col">Status</th>
                 <td style="color: green">{{$fir->status}}</td>
                 
-                
+            </tr>    
+               
                
                 
                 
-
-                <td>
+               
+                <td class="text-align: center">
 
 
                    <!-- Take action modal will be here-->
-                   <a class="btn btn-sm btn-info float-left" data-toggle="modal" data-target="#modal-<?php echo $fir->id;?>" value=<?php echo $fir->id;?> href="#">Take Action</a>
-
+                   
+                   
+                   <a style="text-align: center"  class="btn btn-sm btn-info float-right " data-toggle="modal" data-target="#modal-<?php echo $fir->id;?>" value=<?php echo $fir->id;?> href="#">Take Action</a>
+              
                    <!-- Modal -->
 <div class="modal fade" id="modal-<?php echo $fir->id;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered" role="document">

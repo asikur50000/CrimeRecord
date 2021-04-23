@@ -18,7 +18,7 @@ class CriminalController extends Controller
     {
            //dd($request->all());
            $criminals = new Criminal();
-           $criminals->policestation = $request->policestation;
+           $criminals->station_id = $request->policestation;
            $criminals->criminalname = $request->criminalname;
            $criminals->criminaldateofbirth = $request->criminaldateofbirth;
            $criminals->crimetype = $request->crimetype;

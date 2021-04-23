@@ -20,8 +20,8 @@ class FirController extends Controller
     {
            //dd($request->all());
            $firs = new fir();
-           $firs->policestation = $request->policestation;
-           $firs->crimetype = $request->crimetype;
+           $firs->station_id = $request->policestation;
+           $firs->category_id = $request->crimetype;
            $firs->nameofaccused = $request->nameofaccused;
            $firs->name = $request->name;
            $firs->mobilenumber = $request->mobilenumber;
