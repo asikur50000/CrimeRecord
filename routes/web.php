@@ -67,13 +67,17 @@ Route::post('criminal/store',[CriminalController::class,'storeForm'])->name('cri
 Route::get('criminal/list',[CriminalController::class,'showList'])->name('criminal.list');
 
 
-//route dor FIR processing
+//route for FIR processing
 
 
 Route::get('fir/form',[FirController::class,'showForm'])->name('fir.form');
 Route::post('fir/store',[FirController::class,'storeForm'])->name('fir.store');
 Route::get('fir/list',[FirController::class,'showList'])->name('fir.list');
 Route::get('fir/details',[FirController::class,'showDetails'])->name('fir.details');
+Route::get('chargesheet/list',[FirController::class,'showChargesheet'])->name('chargesheet.list');
+
+//route for Chargesheet processing
+
 
 
 //delete route

@@ -60,6 +60,11 @@ class FirController extends Controller
         $firs->save();
         return redirect()->back();
     }
+    public function showChargesheet()
+    {
+        $firs = fir::paginate(5);
+         return view('chargesheet.form',compact('firs'));
+    }
 
 
 }
