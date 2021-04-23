@@ -13,14 +13,14 @@
             <img src="{{asset('frontend')}}/logo.png" class="logo">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Car Book</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Logout</a></li>   
+                <li><a href="#">User</a></li>
+                <li><a href="#">Police</a></li>
+                <li><a href="http://localhost/CrimeRecord/public/admin">Admin</a></li>   
             </ul>
         </div>
 <div class="content">
     <h1>Thank You!</h1>
-    <p>Have a great journey</p>
+    <p></p>
   <div>
       <button type="button"><span></span>About Us</button>
       <button type="button"><span></span>Feedback</button>
