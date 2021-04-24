@@ -14,7 +14,9 @@
 @endif
 
     <div class="row">
-        @if(status == "approved")
+
+        @if($firs->status == 'Approved')
+
         <table class="table">
             <thead>
             
@@ -45,22 +47,14 @@
                 
 
                 <td>
-
-                   
-                   
-
-                    
-
-
                 </td>
             </tr>
             @endforeach
             </tbody>
-
-
-
         </table>
+
         @endif
+
         {{ $firs->links() }}
     </div>
 
