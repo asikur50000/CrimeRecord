@@ -11,15 +11,15 @@
                     <div class="navbar-nav ml-auto">
 
                         <!-- Nav Item - User Information -->
-                         <!--
+                         
                         <div class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"> Md Asikur Rahman </span>
                                 <img class="img-profile rounded-circle"
-                                src="http://localhost/prison/public/uploads/user/20210122050136.jpg">
+                                src="http://localhost/CrimeRecord/public/frontend/logo2.png">
                             </a>
-                            -->
+                            
 
 
                             
@@ -32,7 +32,7 @@
                                 </a>
                               
                                 <div class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="http://localhost/prison/public/logout" data-toggle="modal" data-target="#logoutModal">
+                                                                <a class="dropdown-item" href="http://localhost/CrimeRecord/public/admin" data-toggle="modal" data-target="#logoutModal">
                                
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
