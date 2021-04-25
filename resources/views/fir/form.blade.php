@@ -76,10 +76,10 @@
     <input type="text" name="relationwithaccusedperson" class="form-control" id="relationwithaccusedperson" placeholder="">
   </div>
   -->
- 
+
   <div class="form-group">
     <label for="purposeofapplyingfir">Purpose of Applying FIR</label>
-    <input type="text" name="purposeofapplyingfir" class="form-control" id="purposeofapplyingfir" placeholder="">
+    <textarea type="text" name="purposeofapplyingfir" class="form-control" id="ipurposeofapplyingfir" placeholder="" cols="20" rows="5"></textarea>
   </div>
   
 

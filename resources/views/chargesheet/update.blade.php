@@ -4,7 +4,7 @@
 
 
 <div class="container">
-    <h3>Fill Chargesheet Details</h3>
+    <h3>FIR Details</h3>
     @if(session()->has('message'))
         <p class="alert alert-success">{{session()->get('message')}}</p>
     @endif
