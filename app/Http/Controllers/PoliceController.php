@@ -57,6 +57,7 @@ $polices->policename = $request->policename;
 $polices->email = $request->email;
 $polices->mobile = $request->mobile;
 $polices->address = $request->address;
+
 //  $polices->password = $request->password;
 $polices->save();
 return redirect(route('police.list'))->with('message','Updated Successfully'); 

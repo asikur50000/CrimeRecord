@@ -22,10 +22,15 @@ class CreateFirsTable extends Migration
             $table->string('mobilenumber');
             $table->string('address');
             $table->string('email');
+            $table->string('fir_no')->nullable();
             $table->string('remark')->nullable();
             $table->string('status',30)->default('Pending');
            // $table->string('relationwithaccusedperson');
-            $table->string('purposeofapplyingfir');
+           $table->string('purposeofapplyingfir')->nullable();
+            $table->string('sectionoflaw')->nullable();
+            $table->string('officer')->nullable();
+            $table->string('investigationdetails')->nullable();
+            $table->string('chargesheet_status')->nullable();
             $table->timestamps();
         });
     }

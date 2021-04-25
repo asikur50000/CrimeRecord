@@ -57,6 +57,7 @@ class FirController extends Controller
         $firs = Fir::find($id);
         $firs->status = $request->status;
         $firs->remark = $request->remark;
+        $firs->fir_no = $request->fir_no;
         $firs->save();
         return redirect()->back();
     }
@@ -65,6 +66,27 @@ class FirController extends Controller
         $firs = fir::paginate(5);
          return view('chargesheet.form',compact('firs'));
     }
+    
+    public function editChargesheet($id)
+{  
+    $firs = Fir::all();
+    $fir = Fir::find($id);
+    return view('chargesheet.update',compact('fir','firs'));
+}
+public function updateChargesheet(Request $request,$id)
+{  
+    
+    $fir = Fir::find($id);
+    $fir->sectionoflaw = $request->sectionoflaw;
+    $fir->officer = $request->officer;
+    $fir->investigationdetails = $request->investigationdetails;
+    $fir->chargesheet_status = $request->chargesheet_status;
+   
+    $fir->save();
+    return redirect(route('chargesheet.list'))->with('message','Updated Successfully!!!');
+
+    //return view('chargesheet.update',compact('fir','firs'));
+}
 
 
 }

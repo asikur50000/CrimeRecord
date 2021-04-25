@@ -75,8 +75,12 @@ Route::post('fir/store',[FirController::class,'storeForm'])->name('fir.store');
 Route::get('fir/list',[FirController::class,'showList'])->name('fir.list');
 Route::get('fir/details',[FirController::class,'showDetails'])->name('fir.details');
 Route::get('chargesheet/list',[FirController::class,'showChargesheet'])->name('chargesheet.list');
+Route::get('chargesheet/edit/{id}',[FirController::class,'editChargesheet'])->name('chargesheet.edit');
+Route::post('chargesheet/edit/{id}',[FirController::class,'updateChargesheet'])->name('chargesheet.update');
 
 //route for Chargesheet processing
+
+//Route::get('chargesheet/list',[ChargesheetController::class,'showList'])->name('chargesheet.list');
 
 
 

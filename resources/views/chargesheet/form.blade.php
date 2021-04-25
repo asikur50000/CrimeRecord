@@ -15,7 +15,7 @@
 
     <div class="row">
 
-        @if($firs->status == 'Approved')
+     
 
         <table class="table">
             <thead>
@@ -31,31 +31,40 @@
                 
                 <th scope="col">Action</th>
                
-               
             
             </thead>
+
+           
             <tbody>
                 @foreach($firs as $key => $fir)
-
             <tr>
+                @if($fir->status == 'Approved')
                 <th scope="row">{{ $key+1 }}</th>
                 <td>{{$fir->station->name}}</td>
                 <td>{{$fir->name}}</td>
                 <td>{{$fir->mobilenumber}}</td>
                 <td>{{$fir->email}}</td>
-                <td>{{$fir->status}}</td>    
-                
+               
+                <td style="color: green" >{{$fir->status}}</td>  
+
+               <td> 
+                         <a class="btn btn-primary" href="{{ route('chargesheet.edit',$fir->id) }}">Take Action</a> 
+                </td>
+
+                @endif
 
                 <td>
                 </td>
             </tr>
             @endforeach
             </tbody>
+           
         </table>
 
-        @endif
+      
 
         {{ $firs->links() }}
+ 
     </div>
 
     @stop

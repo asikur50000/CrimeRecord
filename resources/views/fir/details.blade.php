@@ -25,7 +25,7 @@
                 @foreach($firs as $key => $fir)
 
             <tr>
-                <th scope="col">FIR No.</th> 
+                <th scope="col">Serial No.</th> 
                 <th scope="row">{{ $key+1 }}</th>
                 <th scope="col">Police Station</th>
                 <td>{{$fir->station->name}}</td>
@@ -98,7 +98,17 @@
           </div>
        <div class="form-group">
            <label for="status">Status</label>
-           <input type="text" class="form-control" id="status" placeholder="" name="status" value="">
+           <select name="status" id="status" class="form-control">
+               <option selected>Choose..</option>
+                <option >Approved</option>
+                <option >Cancelled</option>
+           </select>
+           
+       </div>
+      
+       <div class="form-group">
+           <label for="fir_no">FIR No.</label>
+           <input type="text" class="form-control" id="fir_no" placeholder="" name="fir_no" value="">
        </div>
       
       
