@@ -78,6 +78,8 @@ Route::get('chargesheet/list',[FirController::class,'showChargesheet'])->name('c
 Route::get('chargesheet/edit/{id}',[FirController::class,'editChargesheet'])->name('chargesheet.edit');
 Route::post('chargesheet/edit/{id}',[FirController::class,'updateChargesheet'])->name('chargesheet.update');
 
+Route::get('chargesheet/complete',[FirController::class,'showComplete'])->name('chargesheet.complete');
+
 //route for Chargesheet processing
 
 //Route::get('chargesheet/list',[ChargesheetController::class,'showList'])->name('chargesheet.list');

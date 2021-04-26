@@ -87,6 +87,11 @@ public function updateChargesheet(Request $request,$id)
 
     //return view('chargesheet.update',compact('fir','firs'));
 }
+public function showComplete()
+    {
+        $firs = fir::paginate(5);
+         return view('chargesheet.complete',compact('firs'));
+    }
 
 
 }
