@@ -48,7 +48,7 @@
                 <td style="color: green" >{{$fir->status}}</td>  
 
                <td> 
-                         <a class="btn btn-primary" href="{{ route('chargesheet.edit',$fir->id) }}">Take Action</a> 
+                         <a class="btn btn-primary" href="{{ route('chargesheet.edit',$fir->id,) }}">Take Action</a> 
                 </td>
 
                 @endif

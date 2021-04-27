@@ -20,9 +20,9 @@
                 <th scope="col">FIR No.</th>
                 
                 <th scope="col">Police Station</th>
-                <th scope="col">Name</th>
-                <th scope="col">Mobile Number</th>
-                <th scope="col">Email</th>
+                <th scope="col">Victim Name</th>
+                <th scope="col"> Victim Mobile Number</th> 
+                <th scope="col"> Name Of Accused Person</th>
                 <th scope="col">Chargesheet Status</th>
                
                
@@ -37,7 +37,7 @@
                 <td>{{$fir->station->name}}</td>
                 <td>{{$fir->name}}</td>
                 <td>{{$fir->mobilenumber}}</td>
-                <td>{{$fir->email}}</td>
+                <td>{{$fir->nameofaccused}}</td>
                 <td style="color: green" >{{$fir->chargesheet_status}}</td>
 
                

@@ -17,7 +17,7 @@
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">Serial No.</th>
+                <th scope="col">#</th>
                 <th scope="col">Station Name</th>
                 <th scope="col">Police Name</th>
                 <th scope="col">Email</th>

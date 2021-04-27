@@ -45,7 +45,7 @@
 </div>
 
   <div class="form-group">
-    <label for="nameofaccused">Name of Accused</label>
+    <label for="nameofaccused">Name of Accused Person</label>
     <input type="text" name="nameofaccused" class="form-control" id="nameofaccused" placeholder="">
   </div>
 

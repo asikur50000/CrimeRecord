@@ -48,8 +48,9 @@
                     <td>{{$fir->mobilenumber}}</td>
                     <th scope="col">Address</th>
                     <td>{{$fir->address}}</td>
-                    <th scope="col">Email</th>
+                    <th> scope="col">Email</th>
                     <td>{{$fir->email}}</td>
+                    
                 </tr>
                 <tr>
                     <th scope="col">Date of FIR</th>
