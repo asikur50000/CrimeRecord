@@ -21,6 +21,8 @@
                 <th scope="col">Police Station</th>
                 <th scope="col">Criminal Name</th>
                 <th scope="col">Mobile Number</th>
+                <th scope="col">Criminal Age</th>
+                <th scope="col">Criminal Height</th>
                 <th scope="col">Action</th>
                
                
@@ -34,12 +36,15 @@
                 <td>{{$criminal->station->name}}</td>
                 <td>{{$criminal->criminalname}}</td>
                 <td>{{$criminal->mobilenumber}}</td>
+                <td>{{$criminal->criminalage}}</td>
+                <td>{{$criminal->criminalheight}}</td>
                 
                
                 
                 
 
                 <td>
+                    <a class="btn btn-success" href="{{ route('view.criminal',$criminal->id) }}">View</a>
                     <a class="btn btn-primary" href="{{ route('edit.criminal',$criminal->id) }}">Edit</a>
                     <a class="btn btn-danger" onclick="return confirm('Are you sure?')"  href="{{ route('delete.criminal',$criminal->id) }}">Delete</a>
 {{--                    <a class="btn btn-warning" href="">View</a>--}}

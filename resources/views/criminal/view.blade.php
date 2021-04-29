@@ -2,16 +2,6 @@
 
 @section('page')
 
-
-
-
-
-
-
-
-
-
-
 <style>
 
 
@@ -118,7 +108,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="profile-img">
-                              <img src="http://localhost/CrimeRecord/public/frontend/logo2.png">
+                              <img src="">
                                 <div class="file btn btn-lg btn-primary">
                                  
                                     <input type="file" name="file"/>
@@ -128,7 +118,7 @@
                         <div class="col-md-6">
                             <div class="profile-head">
                                         <h5 style="color:red">
-                                           FIR NUMBER : {{ $fir->fir_no}}
+                                           Criminal Name = {{ $criminal->criminalname}}
                                         </h5>
                                         <h6>
                                            
@@ -138,9 +128,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
-                                    </li>
+                                   
                                 </ul>
                             </div>
                         </div>
@@ -155,10 +143,50 @@
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Station Name</label>
+                                                    <label>Criminal Age</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p> {{ $fir->station->name}}</p>
+                                                    <p> {{ $criminal->criminalage}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Criminal Height</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p> {{ $criminal->criminalheight}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Criminal Mobile Number</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>{{ $criminal->mobilenumber}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Crime Date</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>{{ $criminal->crimedate}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Crime Time</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>{{ $criminal->crimetime}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Crime City</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>{{ $criminal->crimecity}}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -166,47 +194,15 @@
                                                     <label>Crime Type</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p> {{ $fir->category->categoryname}}</p>
+                                                    <p>{{$criminal->category->categoryname}}</p>
                                                 </div>
                                             </div>
-                                            <div class="row">
+                                              <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Name of Accused Person</label>
+                                                    <label>Police Station</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>{{ $fir->nameofaccused}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Victim Name</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>{{ $fir->name}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Victim Mobile Number</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>{{ $fir->mobilenumber}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Address</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>{{ $fir->address}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Email</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>{{ $fir->email}}</p>
+                                                    <p> {{$criminal->station->name}}</p>
                                                 </div>
                                             </div>
     
@@ -215,23 +211,9 @@
                                             
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Date of FIR</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p> {{ $fir->created_at->format('d/m/Y')}}</p>
-                                    </div>
-                                </div>
+                               
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label style="color: green">Status</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p style="color: green">{{ $fir->status}}</p>
-                                                </div>
-                                            </div>
+                              
                                         
                                            
                                     <div class="row">
@@ -250,69 +232,4 @@
                       
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-        <div class="container">
-            <h3>Fill Chargesheet Details</h3>
-
-        <form action="{{ route('chargesheet.update',$fir->id) }}" method="post">
-            @csrf
-            <div class="form-group">
-                <label for="sectionoflaw">Section of Law</label>
-                <input type="text" name="sectionoflaw" class="form-control" id="sectionoflaw" placeholder="">
-              </div>
-
-              <div class="form-group">
-                <label for="officer">Name Of Investigation Officer</label>
-                <input type="text" name="officer" class="form-control" id="officer" placeholder="">
-              </div>
-
-              <div class="form-group">
-                <label for="investigationdetails">Investigation Details</label>
-                <textarea type="text" name="investigationdetails" class="form-control" id="investigationdetails" placeholder="" cols="20" rows="5"></textarea>
-              </div>
-
-             
-
-              <div class="form-group">
-                <label for="chargesheet_status"> Chargesheet Status</label>
-                <select name="chargesheet_status" id="chargesheet_status" class="form-control">
-                    <option selected>Choose..</option>
-                     <option >Completed</option>
-                     <option >Cancelled</option>
-                </select>
-               </div>
-
-                <div class="form-group">
-                    <button type="submit" class="btn btn-success">Submit</button>
-                  </div>
-                
-          
-      </form>
-           
-
-
-
-
-
-
-
-
-@endsection
+            @endsection

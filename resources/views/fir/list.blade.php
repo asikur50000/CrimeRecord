@@ -17,7 +17,7 @@
         <table class="table">
             <thead>
             
-                <th scope="col">FIR No.</th>
+                <th scope="col">#</th>
                 
                 <th scope="col">Police Station</th>
                 <th scope="col">Name</th>

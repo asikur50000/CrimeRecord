@@ -30,7 +30,7 @@
     <input type="text" name="code" class="form-control" id="code" value="{{ $station->code }}" placeholder="">
   </div>
   <div class="form-group">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-info">Update</button>
   </div>
 </form>
 @stop

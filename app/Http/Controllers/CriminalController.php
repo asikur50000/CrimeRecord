@@ -16,17 +16,33 @@ class CriminalController extends Controller
     }
     public function storeForm(Request $request)
     {
+
+
+
+        $file_name='';
+        if($request->has('image')) 
+        {
+            $avatar = $request->file('image');
+
+         
+            $file_name = date('Ymdhms').'.' . $avatar->getClientOriginalExtension();
+           
+            $avatar->storeAs('criminal', $file_name);
+        }
            //dd($request->all());
            $criminals = new Criminal();
            $criminals->station_id = $request->policestation;
            $criminals->criminalname = $request->criminalname;
            $criminals->criminaldateofbirth = $request->criminaldateofbirth;
-           $criminals->crimetype = $request->crimetype;
+           $criminals->category_id = $request->crimetype;
            $criminals->crimedate = $request->crimedate;
            $criminals->mobilenumber = $request->mobilenumber;
            $criminals->crimetime = $request->crimetime;
            $criminals->zipcode = $request->zipcode;
            $criminals->crimecity = $request->crimecity;
+           $criminals->criminalage = $request->criminalage;
+           $criminals->criminalheight = $request->criminalheight;
+           $criminals->image = $file_name;
            $criminals->save();
            return redirect()->back()->with('message','Added Successfully');
     }
@@ -53,17 +69,29 @@ public function updateCriminal(Request $request,$id)
 {
 //dd($request->all());
 $criminals = Criminal::find($id);
-$criminals->policestation = $request->policestation;
+//$criminals->policestation = $request->policestation;
 $criminals->criminalname = $request->criminalname;
 $criminals->criminaldateofbirth = $request->criminaldateofbirth;
-$criminals->crimetype = $request->crimetype;
+//$criminals->crimetype = $request->crimetype;
 $criminals->crimedate = $request->crimedate;
 $criminals->mobilenumber = $request->mobilenumber;
 $criminals->crimetime = $request->crimetime;
 $criminals->zipcode = $request->zipcode;
 $criminals->crimecity = $request->crimecity;
+$criminals->criminalage = $request->criminalage;
+$criminals->criminalheight = $request->criminalheight;
 $criminals->save();
 return redirect(route('criminal.list'))->with('message','Updated Successfully');
+}
+public function viewCriminal($id)
+{  
+   
+
+    return view('criminal.view',
+    [
+          'criminal'=>Criminal::findorFail($id)
+             
+    ]);
 }
 }
 

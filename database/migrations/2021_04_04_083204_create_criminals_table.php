@@ -18,12 +18,15 @@ class CreateCriminalsTable extends Migration
             $table->string('station_id');
             $table->string('criminalname');
             $table->string('criminaldateofbirth');
-            $table->string('crimetype');
             $table->string('crimedate');
             $table->string('mobilenumber');
             $table->string('crimetime');
             $table->string('zipcode');
+            $table->integer('criminalage');
+            $table->integer('criminalheight');
             $table->string('crimecity');
+            $table->string('category_id');
+            $table->string('image')->nullable();
             
             $table->timestamps();
         });

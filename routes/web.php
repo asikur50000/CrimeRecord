@@ -115,3 +115,7 @@ Route::post('criminal/form/{id}',[CriminalController::class,'updateCriminal'])->
 
 Route::post('fir/form/{id}',[FirController::class,'updateFir'])->name('update.fir');
 
+
+//view 
+Route::get('criminal/view/{id}',[CriminalController::class,'viewCriminal'])->name('view.criminal');
+

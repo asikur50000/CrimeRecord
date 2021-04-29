@@ -20,7 +20,7 @@
         <table class="table">
             <thead>
             
-                <th scope="col">Serial No.</th>
+                <th scope="col">FIR Number</th>
                 
                 <th scope="col">Police Station</th>
                 <th scope="col">Name</th>
@@ -39,7 +39,7 @@
                 @foreach($firs as $key => $fir)
             <tr>
                 @if($fir->status == 'Approved')
-                <th scope="row">{{ $key+1 }}</th>
+                <td>{{$fir->fir_no}}</td>
                 <td>{{$fir->station->name}}</td>
                 <td>{{$fir->name}}</td>
                 <td>{{$fir->mobilenumber}}</td>

@@ -23,17 +23,16 @@
 @csrf
 
   <div class="form-group">
-    <label for="categoryname">*Category Name</label>
+    <label for="categoryname">Category Name</label>
     <input type="text" name="categoryname" class="form-control" id="categoryname" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="categorydescription">Category Description</label>
+    <textarea type="text" name="categorydescription" class="form-control" id="categorydescription" placeholder="" cols="20" rows="5"></textarea>
   </div>
 
   <div class="form-group">
-    <label for="categorydescription">*Category Description</label>
-    <input type="text" name="categorydescription" class="form-control" id="categorydescription" placeholder="">
-  </div>
-  
-  <div class="form-group">
-    <button type="submit" class="btn btn-primary">Add</button>
+    <button type="submit" class="btn btn-info">Add</button>
   </div>
 </form>
 @stop

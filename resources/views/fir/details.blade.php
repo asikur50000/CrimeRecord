@@ -76,7 +76,7 @@
                    <!-- Take action modal will be here-->
                    
                    <div  style="text-align: center">
-                   <a style="text-align: center"  class="btn btn-sm btn-info float-right " data-toggle="modal" data-target="#modal-<?php echo $fir->id;?>" value=<?php echo $fir->id;?> href="#">Take Action</a>
+                   <a style="text-align: center"  class="btn btn-sm btn-info float-left " data-toggle="modal" data-target="#modal-<?php echo $fir->id;?>" value=<?php echo $fir->id;?> href="#">Take Action</a>
               
                    <!-- Modal -->
 <div class="modal fade" id="modal-<?php echo $fir->id;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

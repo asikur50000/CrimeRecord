@@ -17,8 +17,7 @@
         <table class="table">
             <thead>
             
-                <th scope="col">FIR No.</th>
-                
+                <th scope="col">FIR Number</th> 
                 <th scope="col">Police Station</th>
                 <th scope="col">Victim Name</th>
                 <th scope="col"> Victim Mobile Number</th> 
@@ -33,7 +32,7 @@
 
             <tr>
                 @if($fir->chargesheet_status == 'Completed')
-                <th scope="row">{{ $key+1 }}</th>
+                <td>{{$fir->fir_no}}</td>
                 <td>{{$fir->station->name}}</td>
                 <td>{{$fir->name}}</td>
                 <td>{{$fir->mobilenumber}}</td>
