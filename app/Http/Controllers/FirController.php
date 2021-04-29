@@ -69,9 +69,15 @@ class FirController extends Controller
     
     public function editChargesheet($id)
 {  
-    $firs = Fir::all();
-    $fir = Fir::find($id);
-    return view('chargesheet.update',compact('fir','firs'));
+   // $firs = Fir::all();
+    //$fir = Fir::find($id);
+    //return view('chargesheet.update',compact('fir','firs'));
+
+    return view('chargesheet.update',
+    [
+          'fir'=>Fir::findorFail($id)
+             
+    ]);
 }
 public function updateChargesheet(Request $request,$id)
 {  
