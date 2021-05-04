@@ -20,7 +20,7 @@
                 <th scope="col">#</th>
                 
                 <th scope="col">Police Station</th>
-                <th scope="col">Name</th>
+                <th scope="col">Victim Name</th>
                 <th scope="col">Mobile Number</th>
                 <th scope="col">Address</th>
                 <th scope="col">Email</th>

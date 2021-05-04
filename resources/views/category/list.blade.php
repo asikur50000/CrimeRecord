@@ -19,7 +19,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Category Name</th>
-                <th scope="col">Description</th>
+                <th scope="col">Category Description</th>
                 <th scope="col">Action</th>
                
                
