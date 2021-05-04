@@ -15,7 +15,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">User</a></li>
                 <li><a href="#">Police</a></li>
-                <li><a href="http://localhost/CrimeRecord/public/admin">Admin</a></li>   
+                <li><a href="{{ route('admin.login') }}">Admin</a></li>   
             </ul>
         </div>
         <div class="projectname">
@@ -25,8 +25,7 @@
     <h1>Thank You!</h1>
     <p>Have a Nice and Safe Day</p>
   <div>
-      <button type="button"><span></span>About Us</button>
-      <button type="button"><span></span>Feedback</button>
+     
   </div>
 </div>
     </div>

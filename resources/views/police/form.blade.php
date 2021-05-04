@@ -33,7 +33,7 @@
   </div>
 
   <div class="form-group">
-    <label for="policename">*Police Name</label>
+    <label for="policename">Police Name</label>
     <input type="text" name="policename" class="form-control" id="policename" placeholder="">
   </div>
   <div class="form-group">
@@ -41,11 +41,11 @@
     <input type="Email" name="email" class="form-control" id="email" placeholder="">
   </div>
   <div class="form-group">
-    <label for="mobile">*Mobile Number</label>
+    <label for="mobile">Mobile Number</label>
     <input type="number" name="mobile" class="form-control" id="mobile" placeholder="">
   </div>
   <div class="form-group">
-    <label for="address">*Address</label>
+    <label for="address">Address</label>
     <input type="text" name="address" class="form-control" id="address" placeholder="">
   </div>
   <!--
@@ -55,7 +55,7 @@
   </div>
   -->
   <div class="form-group">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-info">Submit</button>
   </div>
 </form>
 @stop

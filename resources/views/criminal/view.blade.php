@@ -108,17 +108,14 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="profile-img">
-                              <img src="">
-                                <div class="file btn btn-lg btn-primary">
-                                 
-                                    <input type="file" name="file"/>
-                                </div>
+                                <img src="{{ asset('storage/uploads/criminal/' .$criminal->image) }}" alt="photo is missing">
+                               
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="profile-head">
                                         <h5 style="color:red">
-                                           Criminal Name = {{ $criminal->criminalname}}
+                                           Criminal Name : {{ $criminal->criminalname}}
                                         </h5>
                                         <h6>
                                            

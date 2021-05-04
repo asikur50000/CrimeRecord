@@ -118,7 +118,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="profile-img">
-                              <img src="http://localhost/CrimeRecord/public/frontend/logo2.png">
+                              <img src="http://localhost/CrimeRecord/public/frontend/police.jpg">
                                 <div class="file btn btn-lg btn-primary">
                                  
                                     <input type="file" name="file"/>
@@ -138,9 +138,8 @@
                                     <li class="nav-item">
                                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
-                                    </li>
+                                    
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -195,24 +194,20 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Address</label>
+                                                    <label>Victim Address</label>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <p>{{ $fir->address}}</p>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Email</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>{{ $fir->email}}</p>
-                                                </div>
-                                            </div>
-    
-    
-    
-                                            
+      
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Victim Email</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{ $fir->email}}</p>
+                                    </div>
                                 </div>
 
                                 <div class="row">
@@ -223,19 +218,18 @@
                                         <p> {{ $fir->created_at->format('d/m/Y')}}</p>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label style="color: green">Status</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p style="color: green">{{ $fir->status}}</p>
+                                    </div>
+                                </div>
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label style="color: green">Status</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p style="color: green">{{ $fir->status}}</p>
-                                                </div>
-                                            </div>
                                         
                                            
-                                    <div class="row">
-                                        <div class="col-md-12">
+                                    
                                             <label></label><br/>
                                             <p></p>
                                         </div>

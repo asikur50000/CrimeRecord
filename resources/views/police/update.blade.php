@@ -22,14 +22,11 @@
 <form method="post" action="{{ route('update.police',$police->id) }}">
 @csrf
 
-  <div class="form-group">
-    <label for="policestation">*Police Station</label>
-    <input type="text" name="policestation" class="form-control" id="policestation" value="{{ $police->policestation }}" placeholder="">
-  </div>
+
 
 
   <div class="form-group">
-    <label for="policename">*Police Name</label>
+    <label for="policename">Police Name</label>
     <input type="text" name="policename" class="form-control" id="policename" value="{{ $police->policename }}" placeholder="">
   </div>
   <div class="form-group">
@@ -37,11 +34,11 @@
     <input type="Email" name="email" class="form-control" id="email" value="{{ $police->email }}" placeholder="">
   </div>
   <div class="form-group">
-    <label for="mobile">*Mobile Number</label>
+    <label for="mobile">Mobile Number</label>
     <input type="number" name="mobile" class="form-control" id="mobile" value="{{ $police->mobile }}" placeholder="">
   </div>
   <div class="form-group">
-    <label for="address">*Address</label>
+    <label for="address">Address</label>
     <input type="text" name="address" class="form-control" id="address" value="{{ $police->address }}" placeholder="">
   </div>
   <!--

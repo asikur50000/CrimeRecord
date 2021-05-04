@@ -114,6 +114,7 @@
             <a class="collapse-item" href="{{route('fir.form')}}">FIR Form</a>
             <a class="collapse-item" href="{{route('fir.list')}}">FIR History</a>
             <a class="collapse-item" href="{{route('fir.details')}}">FIR Details</a>
+            
            
         </div>
     </div>

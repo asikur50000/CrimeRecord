@@ -22,11 +22,11 @@
 @csrf
 
   <div class="form-group">
-    <label for="name">*Police Station Name</label>
+    <label for="name">Police Station Name</label>
     <input type="text" name="name" class="form-control" id="name" value="{{ $station->name }}" placeholder="">
   </div>
   <div class="form-group">
-    <label for="code">*Police Station Code</label>
+    <label for="code">Police Station Code</label>
     <input type="text" name="code" class="form-control" id="code" value="{{ $station->code }}" placeholder="">
   </div>
   <div class="form-group">

@@ -52,7 +52,6 @@ public function updatePolice(Request $request,$id)
 
 //dd($request->all());
 $polices = Police::find($id);
-$polices->policestation = $request->policestation;
 $polices->policename = $request->policename;
 $polices->email = $request->email;
 $polices->mobile = $request->mobile;

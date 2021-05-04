@@ -319,11 +319,11 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="{{ URL::asset('/style/img/logo.png') }}" id="icon" alt="Kodeeo Prison" />
+      <img src="{{ URL::asset('/style/img/logo.png') }}" id="icon" alt="Crime Record" />
     </div>
 
     <!-- Login Form -->
-    <form action="http://localhost/CrimeRecord/public/home" method="">
+    <form action="{{ route('admin.process') }}" method="post">
       @csrf
       <input type="email" id="email" class="fadeIn second" name="email" placeholder="email">
       <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">

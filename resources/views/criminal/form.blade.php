@@ -89,7 +89,7 @@
   </div>
 
   <div class="form-group">
-    <label for="image">User Image</label>
+    <label for="image">Criminal Image</label>
     <input type="file" name="image" class="form-control" value="" id="image" placeholder="Select Image">
   </div>
 

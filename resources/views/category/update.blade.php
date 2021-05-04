@@ -23,13 +23,15 @@
 @csrf
 
   <div class="form-group">
-    <label for="categoryname">*Category Name</label>
+    <label for="categoryname">Category Name</label>
     <input type="text" name="categoryname" class="form-control" id="categoryname" value="{{ $category->categoryname }}" placeholder="">
   </div>
 
+
+
   <div class="form-group">
-    <label for="categorydescription">*Category Description</label>
-    <input type="text" name="categorydescription" class="form-control" id="categorydescription" value="{{ $category->categorydescription }}" placeholder="">
+    <label for="categorydescription">Category Description</label>
+    <textarea type="text" name="categorydescription" class="form-control" id="categorydescription" value="{{ $category->categorydescription }}" placeholder="" cols="20" rows="5"></textarea>
   </div>
   
   <div class="form-group">

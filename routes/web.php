@@ -2,12 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StationController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\PoliceController;
 use App\Http\Controllers\FrontendTemplateController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CriminalController;
 use App\Http\Controllers\FirController;
 use App\Http\Controllers\ChargesheetController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,10 +20,16 @@ use App\Http\Controllers\ChargesheetController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//ADMIN  LOGIN
+Route::get('/admin/login',[UserController::class,'login'])->name('admin.login');
+Route::post('/admin/login',[UserController::class,'process'])->name('admin.process');
+//logout
+Route::get('logout',[UserController::class,'logout'])->name('user.logout');
 
-Route::get('/admin', function () {
-    return view('admin.login');
-});
+
+
+//middleware starts here
+Route::group(['middleware'=>'auth','admin'], function(){
 
 Route::get('/home', function () {
     return view('master');
@@ -35,7 +43,7 @@ Route::get('/', function () {
 });
 
 
-
+Route::get('/dashboard',[DashboardController::class,'show'])->name('dashboard');
 //Route for station processing
 
 
@@ -118,4 +126,12 @@ Route::post('fir/form/{id}',[FirController::class,'updateFir'])->name('update.fi
 
 //view 
 Route::get('criminal/view/{id}',[CriminalController::class,'viewCriminal'])->name('view.criminal');
+
+
+
+
+
+
+//middleware ends here
+});
 
