@@ -33,4 +33,47 @@ class UserController extends Controller
         Auth::logout();
         return redirect()->route('admin.login')->with('message','Logout Success!');
     }
+
+    public function registration()
+        {
+            return view('admin.registration');
+        }
+
+        public function storeRegistration(Request $request)
+    {      
+
+        $request->validate([
+            'name'=> 'required',
+            'email'=> 'required',
+            'username'=> 'required',
+            'nid'=> 'required|min:10',
+            'age'=> 'required',
+            'gender'=> 'required',
+            'address'=> 'required',
+            'password'=> 'required',
+
+        ]);
+           //dd($request->all());
+           $users = new User();
+           $users->name = $request->name;
+           $users->email = $request->email;
+           $users->username = $request->username;
+           $users->nid = $request->nid;
+           $users->age = $request->age;
+           $users->address = $request->address;
+           $users->gender = $request->gender;
+           $users->password = bcrypt($request->password);
+           $users->save();
+           return redirect(route('admin.login'))->with('message','Registration Successfully');
+    }
+
+    public function profile()
+        {
+            return view('partial.profile');
+        }
+
+
+
+
+
 }

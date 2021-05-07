@@ -14,6 +14,11 @@ class CategoryController extends Controller
     }
     public function storeForm(Request $request)
     {
+        $request->validate([
+            'categoryname'=> 'required|max:20',
+            'categorydescription'=> 'required|min:10|max:255'
+
+        ]);
            //dd($request->all());
            $categorys = new Category();
            $categorys->categoryname = $request->categoryname;

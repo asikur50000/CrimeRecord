@@ -23,11 +23,29 @@ use App\Http\Controllers\DashboardController;
 //ADMIN  LOGIN
 Route::get('/admin/login',[UserController::class,'login'])->name('admin.login');
 Route::post('/admin/login',[UserController::class,'process'])->name('admin.process');
+
+
+//Registraion
+Route::get('/admin/registration',[UserController::class,'registration'])->name('admin.registration');
+Route::post('/admin/registration',[UserController::class,'storeRegistration'])->name('admin.storeRegistration');
+
+
 //logout
 Route::get('logout',[UserController::class,'logout'])->name('user.logout');
+//Login Profile
+Route::get('profile',[UserController::class,'profile'])->name('partial.profile');
 
 
 
+//frontend 
+Route::get('/', function () {
+    return view('frontend.home');
+});
+
+
+//
+//
+//
 //middleware starts here
 Route::group(['middleware'=>'auth','admin'], function(){
 
@@ -38,9 +56,7 @@ Route::get('/CrimeRecord', function () {
     return view('CrimeRecord');
 });
 
-Route::get('/', function () {
-    return view('frontend.home');
-});
+
 
 
 Route::get('/dashboard',[DashboardController::class,'show'])->name('dashboard');

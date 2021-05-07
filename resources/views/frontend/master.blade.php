@@ -13,7 +13,7 @@
             <img src="frontend/img/logo2.png" class="logo">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">User Registration</a></li>
+                <li><a href="{{ route('admin.registration') }}">User Registration</a></li>
                 <li><a href="#">Police</a></li>
                 <li><a href="{{ route('admin.login') }}">Admin</a></li>   
             </ul>

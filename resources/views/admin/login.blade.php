@@ -332,8 +332,13 @@
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
+      
+      <br>
+      <a class="underlineHover" href="{{ route('admin.registration') }}">Registration Here</a>         
     </div>
+    
+     
+
 
   </div>
 </div>

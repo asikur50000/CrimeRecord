@@ -14,8 +14,8 @@ class StationController extends Controller
     public function storeForm(Request $request)
     {
         $request->validate([
-            'code'=> 'required',
-            'name'=> 'required'
+            'code'=> 'required|min:5',
+            'name'=> 'required|max:20'
 
         ]);
 

@@ -15,6 +15,14 @@ class PoliceController extends Controller
     }
     public function storeForm(Request $request)
     {
+
+        $request->validate([
+            'mobile'=> 'required|min:10',
+            'policename'=> 'required|max:20',
+            'address'=> 'required|max:50',
+        
+
+        ]);
            //dd($request->all());
            $polices = new Police();
            $polices->station_id = $request->policestation;

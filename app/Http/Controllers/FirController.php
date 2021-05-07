@@ -18,6 +18,16 @@ class FirController extends Controller
     }
     public function storeForm(Request $request)
     {
+        $request->validate([
+            'mobilenumber'=> 'required|min:10',
+            'nameofaccused'=> 'required|max:20',
+            'name'=> 'required|max:20',
+            'mobilenumber'=> 'required|min:10',
+            'address'=> 'required|max:50',
+            'purposeofapplyingfir'=> 'required|min:10|max:100',
+          
+
+        ]);
            //dd($request->all());
            $firs = new fir();
            $firs->station_id = $request->policestation;
@@ -54,6 +64,13 @@ class FirController extends Controller
 
     public function updateFir(Request $request,$id)
     {
+
+        $request->validate([
+            'fir_no'=> 'required|min:6',
+            
+          
+
+        ]);
         $firs = Fir::find($id);
         $firs->status = $request->status;
         $firs->remark = $request->remark;
@@ -81,6 +98,16 @@ class FirController extends Controller
 }
 public function updateChargesheet(Request $request,$id)
 {  
+
+
+    $request->validate([
+        'sectionoflaw'=> 'required|min:20',
+        'officer'=> 'required|max:20',
+        'investigationdetails'=> 'required|min:10|max:255',
+       
+      
+
+    ]);
     
     $fir = Fir::find($id);
     $fir->sectionoflaw = $request->sectionoflaw;

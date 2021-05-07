@@ -2,16 +2,6 @@
 
 @section('page')
 
-
-
-
-
-
-
-
-
-
-
 <style>
 
 
@@ -111,35 +101,23 @@
         color: #0062cc;
     }
     </style>
-
-    <!--alert message-->
-@if(session()->has('message'))
-<p class="alert alert-success">{{session()->get('message')}}</p>
-@endif
-
-@if($errors->any())
-@foreach($errors->all() as $er)
-    <p class="alert alert-danger">{{$er}}</p>
-@endforeach  
-@endif
     
     
     <div class="container emp-profile">
-                <form method="post">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="profile-img">
-                              <img src="http://localhost/CrimeRecord/public/frontend/police.jpg">
-                                <div class="file btn btn-lg btn-primary">
-                                 
-                                    <input type="file" name="file"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
+        <form method="post">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                       <!-- <img src="" alt="photo is missing">  -->
+                       
+                    </div>
+                </div>
+                    
+                    <div class="col-md-6">
                             <div class="profile-head">
-                                        <h5 style="color:red">
-                                           FIR NUMBER : {{ $fir->fir_no}}
+                                        <h5 style="color:lightseagreen">
+                                            <span style="font-weight: bold"> Name: {{ auth()->user()->name }}</span>
+                                          
                                         </h5>
                                         <h6>
                                            
@@ -149,8 +127,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
                                     </li>
-                                    
-                                    
+                                   
                                 </ul>
                             </div>
                         </div>
@@ -165,82 +142,61 @@
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Police Station Name</label>
+                                                    <label>Username</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p> {{ $fir->station->name}}</p>
+                                                    <p> {{ auth()->user()->username }}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Crime Type</label>
+                                                    <label>NID</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p> {{ $fir->category->categoryname}}</p>
+                                                    <p> {{ auth()->user()->nid }}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Name of Accused Person</label>
+                                                    <label>Age</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>{{ $fir->nameofaccused}}</p>
+                                                    <p>{{ auth()->user()->age }}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Victim Name</label>
+                                                    <label>Gender</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>{{ $fir->name}}</p>
+                                                    <p>{{ auth()->user()->gender }}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Victim Mobile Number</label>
+                                                    <label>Email</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>{{ $fir->mobilenumber}}</p>
+                                                    <p>{{ auth()->user()->email }}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Victim Address</label>
+                                                    <label>Address</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>{{ $fir->address}}</p>
+                                                    <p>{{ auth()->user()->address }}</p>
                                                 </div>
-                                            </div>
-      
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Victim Email</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>{{ $fir->email}}</p>
-                                    </div>
+                                            </div>     
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Date of FIR</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p> {{ $fir->created_at->format('d/m/Y')}}</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label style="color: green">Status</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p style="color: green">{{ $fir->status}}</p>
-                                    </div>
-                                </div>
+                               
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                              
                                         
                                            
-                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
                                             <label></label><br/>
                                             <p></p>
                                         </div>
@@ -255,69 +211,4 @@
                       
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-        <div class="container">
-            <h3>Fill Chargesheet Details</h3>
-
-        <form action="{{ route('chargesheet.update',$fir->id) }}" method="post">
-            @csrf
-            <div class="form-group">
-                <label for="sectionoflaw">Section of Law</label>
-                <input type="text" name="sectionoflaw" class="form-control" id="sectionoflaw" placeholder="">
-              </div>
-
-              <div class="form-group">
-                <label for="officer">Name Of Investigation Officer</label>
-                <input type="text" name="officer" class="form-control" id="officer" placeholder="">
-              </div>
-
-              <div class="form-group">
-                <label for="investigationdetails">Investigation Details</label>
-                <textarea type="text" name="investigationdetails" class="form-control" id="investigationdetails" placeholder="" cols="20" rows="5"></textarea>
-              </div>
-
-             
-
-              <div class="form-group">
-                <label for="chargesheet_status"> Chargesheet Status</label>
-                <select name="chargesheet_status" id="chargesheet_status" class="form-control">
-                    <option selected>Choose..</option>
-                     <option >Completed</option>
-                     <option >Cancelled</option>
-                </select>
-               </div>
-
-                <div class="form-group">
-                    <button type="submit" class="btn btn-success">Submit</button>
-                  </div>
-                
-          
-      </form>
-           
-
-
-
-
-
-
-
-
-@endsection
+            @endsection

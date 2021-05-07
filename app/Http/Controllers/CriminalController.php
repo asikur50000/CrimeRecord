@@ -29,6 +29,16 @@ class CriminalController extends Controller
            
             $avatar->storeAs('criminal', $file_name);
         }
+
+        $request->validate([
+            'criminalage'=> 'required|max:2',
+            'mobilenumber'=> 'required|min:10',
+            'criminalname'=> 'required|max:20',
+            'zipcode'=> 'required|max:4',
+            'crimecity'=> 'required|max:20',
+           // 'crimimalheight'=> 'required|max:3',
+
+        ]);
            //dd($request->all());
            $criminals = new Criminal();
            $criminals->station_id = $request->policestation;

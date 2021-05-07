@@ -25,7 +25,7 @@
 <div class="sidebar-heading">
     
 </div>
-
+@if(Auth::check() && Auth::user()->role  == "admin" || Auth::user()->role  == "police")
 <!-- Nav Item - Pages Collapse Menu (Police Station) -->
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -98,7 +98,7 @@
 </li>
 
 
-
+@endif
 <!-- Nav Item - Pages Collapse Menu (FIR) -->
 
 <li class="nav-item">
