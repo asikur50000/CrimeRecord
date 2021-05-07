@@ -46,7 +46,7 @@
 
   <div class="form-group">
     <label for="nameofaccused">Name of Accused Person</label>
-    <input type="text" name="nameofaccused" class="form-control" id="nameofaccused" placeholder="">
+    <input type="text" name="nameofaccused" class="form-control" id="nameofaccused" placeholder="Maximum 20 Character">
   </div>
 
 
@@ -56,19 +56,19 @@
   
   <div class="form-group">
     <label for="name"> Victim Name</label>
-    <input type="text" name="name" class="form-control" id="name" placeholder="">
+    <input type="text" name="name" class="form-control" id="name" placeholder="Maximum 20 Character">
   </div>
   <div class="form-group">
     <label for="mobilenumber">Victim Mobile Number</label>
-    <input type="number" name="mobilenumber" class="form-control" id="mobilenumber" placeholder="">
+    <input type="number" name="mobilenumber" class="form-control" id="mobilenumber" placeholder="Minimum 10 Digit">
   </div>
   <div class="form-group">
     <label for="address">Address</label>
-    <input type="text" name="address" class="form-control" id="address" placeholder="">
+    <input type="text" name="address" class="form-control" id="address" placeholder="Maximum 50 Character">
   </div>
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="text" name="email" class="form-control" id="email" placeholder="">
+    <input type="text" name="email" class="form-control" id="email" placeholder="Enter Email">
   </div>
    <!--
   <div class="form-group">
@@ -79,7 +79,7 @@
 
   <div class="form-group">
     <label for="purposeofapplyingfir">Purpose of Applying FIR</label>
-    <textarea type="text" name="purposeofapplyingfir" class="form-control" id="ipurposeofapplyingfir" placeholder="" cols="20" rows="5"></textarea>
+    <textarea type="text" name="purposeofapplyingfir" class="form-control" id="ipurposeofapplyingfir" placeholder="(Min:10 Max:255) Character" cols="20" rows="5"></textarea>
   </div>
   
 
