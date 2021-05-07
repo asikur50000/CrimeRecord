@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title> Admin Panel</title>
+        <title> Login Panel</title>
     </head>
 
     @if(session()->has('message'))

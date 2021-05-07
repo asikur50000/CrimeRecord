@@ -66,7 +66,8 @@ class FirController extends Controller
     {
 
         $request->validate([
-            'fir_no'=> 'required|min:6',
+            'fir_no'=> 'required|min:5',
+            'remark'=> 'required|max:50',
             
           
 
@@ -101,7 +102,7 @@ public function updateChargesheet(Request $request,$id)
 
 
     $request->validate([
-        'sectionoflaw'=> 'required|min:20',
+        'sectionoflaw'=> 'required|max:10',
         'officer'=> 'required|max:20',
         'investigationdetails'=> 'required|min:10|max:255',
        

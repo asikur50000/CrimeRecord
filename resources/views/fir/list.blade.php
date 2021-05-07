@@ -51,7 +51,7 @@
                 <td>
 
 
-                   
+                    <a class="btn btn-success" href="{{ route('fir.details',$fir->id) }}">View</a>
 
                     <a class="btn btn-danger" onclick="return confirm('Are you sure?')"  href="{{ route('delete.fir',$fir->id) }}">Delete</a>
 

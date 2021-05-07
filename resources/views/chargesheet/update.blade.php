@@ -281,17 +281,17 @@
             @csrf
             <div class="form-group">
                 <label for="sectionoflaw">Section of Law</label>
-                <input type="text" name="sectionoflaw" class="form-control" id="sectionoflaw" placeholder="">
+                <input type="text" name="sectionoflaw" class="form-control" id="sectionoflaw" placeholder="Maximum 10 Character">
               </div>
 
               <div class="form-group">
                 <label for="officer">Name Of Investigation Officer</label>
-                <input type="text" name="officer" class="form-control" id="officer" placeholder="">
+                <input type="text" name="officer" class="form-control" id="officer" placeholder="Maximum 20 Character">
               </div>
 
               <div class="form-group">
                 <label for="investigationdetails">Investigation Details</label>
-                <textarea type="text" name="investigationdetails" class="form-control" id="investigationdetails" placeholder="" cols="20" rows="5"></textarea>
+                <textarea type="text" name="investigationdetails" class="form-control" id="investigationdetails" placeholder="Maximum 255 Character" cols="20" rows="5"></textarea>
               </div>
 
              

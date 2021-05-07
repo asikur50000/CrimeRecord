@@ -1,6 +1,10 @@
 @extends('master')
 
 @section('page')
+
+
+
+
 <div class="container">
 <h3>FIR Details</h3>
 @if(session()->has('message'))
@@ -30,7 +34,7 @@
                 <th scope="col">Police Station</th>
                 <td>{{$fir->station->name}}</td>
                 <th scope="col">Crime Type</th>
-                <td>{{$fir->category->categoryname}}</td>
+                <td>{{optional($fir->category)->categoryname}}</td>
                 
             </tr>
             <tr>
@@ -61,8 +65,13 @@
                     @endif
                 </td>
             
-            <th scope="col">Status</th>
-                <td style="color: green">{{$fir->status}}</td>
+                <td>
+                    @if(isset($fir->created_at))
+                    {{ $fir->created_at->format('d/m/Y')}}
+                    @else
+                    {{'-'}}
+                    @endif
+                </td>
                 
             </tr>    
                
@@ -96,8 +105,13 @@
         @csrf
         <div class="form-group">
             <label for="remark">Remark</label>
-            <textarea type="text" name="remark" class="form-control" id="remark" placeholder="" cols="20" rows="5"></textarea>
+            <textarea type="text" name="remark" class="form-control" id="remark" placeholder="Maximum 50 Character" cols="20" rows="5"></textarea>
           </div>
+
+          <div class="form-group">
+            <label for="fir_no">FIR No.</label>
+            <input type="text" class="form-control" id="fir_no" placeholder="Maximum 5 Character" name="fir_no" value="">
+        </div>
        <div class="form-group">
            <label for="status">Status</label>
            <select name="status" id="status" class="form-control">
@@ -106,11 +120,6 @@
                 <option >Cancelled</option>
            </select>
            
-       </div>
-      
-       <div class="form-group">
-           <label for="fir_no">FIR No.</label>
-           <input type="text" class="form-control" id="fir_no" placeholder="" name="fir_no" value="">
        </div>
       
       
