@@ -334,6 +334,7 @@
     <div id="formFooter">
       
       <br>
+      <a class="btn btn-info" href="http://localhost/CrimeRecord/public/">Home Page</a>
       <a class="underlineHover" href="{{ route('admin.registration') }}">Registration Here</a>         
     </div>
     

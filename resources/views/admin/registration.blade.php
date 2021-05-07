@@ -123,7 +123,7 @@
                        
                         <div class="p-t-15">
                             <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
-                            <a class="btn btn" style="color: green" href="http://localhost/CrimeRecord/public/">Back to Home</a>
+                            <a class="btn btn-info" style="color: green" href="http://localhost/CrimeRecord/public/">Back to Home</a>
                         </div>
                       
                     </form>
