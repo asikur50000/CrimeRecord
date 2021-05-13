@@ -20,12 +20,12 @@ class FirController extends Controller
     {
         $request->validate([
             'mobilenumber'=> 'required|min:10',
-            'nameofaccused'=> 'required|max:20',
-            'name'=> 'required|max:20',
-            'mobilenumber'=> 'required|min:10',
-            'address'=> 'required|max:50',
-            'purposeofapplyingfir'=> 'required|min:10|max:100',
-          
+            'nameofaccused'=> 'required',
+            'name'=> 'required',
+            'mobilenumber'=> 'required',
+            'address'=> 'required',
+            'purposeofapplyingfir'=> 'required',
+            
 
         ]);
            //dd($request->all());
@@ -66,8 +66,8 @@ class FirController extends Controller
     {
 
         $request->validate([
-            'fir_no'=> 'required|min:5',
-            'remark'=> 'required|max:50',
+            'fir_no'=> 'required',
+            'remark'=> 'required',
             
           
 
@@ -102,9 +102,9 @@ public function updateChargesheet(Request $request,$id)
 
 
     $request->validate([
-        'sectionoflaw'=> 'required|max:10',
-        'officer'=> 'required|max:20',
-        'investigationdetails'=> 'required|min:10|max:255',
+        'sectionoflaw'=> 'required',
+        'officer'=> 'required',
+        'investigationdetails'=> 'required|max:255',
        
       
 

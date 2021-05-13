@@ -23,11 +23,11 @@
 
   <div class="form-group">
     <label for="name">Police Station Name</label>
-    <input type="text" name="name" class="form-control" id="name" placeholder="Maximum 20 Character">
+    <input type="text" name="name" class="form-control" id="name" placeholder="">
   </div>
   <div class="form-group">
     <label for="code">Police Station Code</label>
-    <input type="text" name="code" class="form-control" id="code" placeholder="Minimum 5 Character">
+    <input type="text" name="code" class="form-control" id="code" placeholder="">
   </div>
   <div class="form-group">
     <button type="submit" class="btn btn-info">Submit</button>

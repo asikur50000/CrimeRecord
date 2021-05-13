@@ -231,10 +231,10 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label style="color: green">Status</label>
+                                        <label style="color: green">Chargesheet Status</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p style="color: green">{{ $fir->status}}</p>
+                                        <p style="color: green">{{ $fir->chargesheet_status}}</p>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -281,17 +281,17 @@
             @csrf
             <div class="form-group">
                 <label for="sectionoflaw">Section of Law</label>
-                <input type="text" name="sectionoflaw" class="form-control" id="sectionoflaw" placeholder="Maximum 10 Character">
+                <input type="text" name="sectionoflaw" class="form-control" id="sectionoflaw" placeholder="">
               </div>
 
               <div class="form-group">
                 <label for="officer">Name Of Investigation Officer</label>
-                <input type="text" name="officer" class="form-control" id="officer" placeholder="Maximum 20 Character">
+                <input type="text" name="officer" class="form-control" id="officer" placeholder="">
               </div>
 
               <div class="form-group">
                 <label for="investigationdetails">Investigation Details</label>
-                <textarea type="text" name="investigationdetails" class="form-control" id="investigationdetails" placeholder="Maximum 255 Character" cols="20" rows="5"></textarea>
+                <textarea type="text" name="investigationdetails" class="form-control" id="investigationdetails" placeholder="" cols="20" rows="5"></textarea>
               </div>
 
              

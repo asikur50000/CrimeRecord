@@ -20,6 +20,7 @@ class CreatePoliceTable extends Migration
             $table->string('email');
             $table->bigInteger('mobile');
             $table->string('address');
+            $table->string('image');
            // $table->string('password');
             $table->timestamps();
         });

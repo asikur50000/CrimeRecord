@@ -43,7 +43,7 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Registration Form</h2>
-                    <form method="POST" action="{{ route('admin.storeRegistration') }}">
+                    <form method="POST" action="{{ route('admin.storeRegistration') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="role">Role</label>
@@ -82,8 +82,8 @@
                                     <label class="gender">Gender</label>
                                     <select id="gender" required name="gender" class="form-control">
                                         <option selected>Choose...</option>
-                                        <option>male</option>
-                                        <option>female</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
                                       </select>
                                 </div>
                             </div>
@@ -118,8 +118,14 @@
                         </div>
                         <div class="col-2">
                             <div class="input-group">
+                            <label for="image">Your Picture</label>
+                            <input type="file" name="image" class="form-control" value="" id="image" placeholder="">
+                          </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
                                 <label class="password">Password</label>
-                                <input class="input--style-4" type="text" name="password">
+                                <input class="input--style-4" type="password" name="password">
                             </div>
                         </div>
                     

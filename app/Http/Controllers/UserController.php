@@ -42,15 +42,26 @@ class UserController extends Controller
         public function storeRegistration(Request $request)
     {      
 
+        $file_name='';
+        if($request->has('image')) 
+        {
+            $avatar = $request->file('image');
+
+         
+            $file_name = date('Ymdhms').'.' . $avatar->getClientOriginalExtension();
+           
+            $avatar->storeAs('user', $file_name);
+        }
+
         $request->validate([
             'name'=> 'required',
             'email'=> 'required',
-           
             'nid'=> 'required|min:10',
             'age'=> 'required',
             'gender'=> 'required',
             'address'=> 'required',
             'password'=> 'required',
+            'image'=> 'required',
 
         ]);
            //dd($request->all());
@@ -58,6 +69,7 @@ class UserController extends Controller
            $users->name = $request->name;
            $users->role = $request->role;
            $users->email = $request->email;
+           $users->image = $request->image;
            $users->username = $request->username;
            $users->nid = $request->nid;
            $users->age = $request->age;

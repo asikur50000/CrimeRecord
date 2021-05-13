@@ -24,11 +24,11 @@
 
   <div class="form-group">
     <label for="categoryname">Category Name</label>
-    <input type="text" name="categoryname" class="form-control" id="categoryname" placeholder="Maximum 20 Character">
+    <input type="text" name="categoryname" class="form-control" id="categoryname" placeholder="">
   </div>
   <div class="form-group">
     <label for="categorydescription">Category Description</label>
-    <textarea type="text" name="categorydescription" class="form-control" id="categorydescription" placeholder="(Min: 10 Max:255) Character" cols="20" rows="5"></textarea>
+    <textarea type="text" name="categorydescription" class="form-control" id="categorydescription" placeholder="" cols="20" rows="5"></textarea>
   </div>
 
   <div class="form-group">

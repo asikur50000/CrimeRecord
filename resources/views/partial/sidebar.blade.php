@@ -58,9 +58,9 @@
     </div>
 </li>
 
-@endif
+
 <!-- Crime Record Crime Category collapse menu-->
-@if(Auth::check() && Auth::user()->role  == "admin" || Auth::user()->role  == "Police")
+
  
     <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree"
@@ -78,10 +78,12 @@
         </div>
     </div>
 </li>
+@endif
 
 
 
 <!-- Crime Record Criminal collapse menu-->
+@if(Auth::check() && Auth::user()->role  == "admin" || Auth::user()->role  == "Police")
 
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsefour"
@@ -99,7 +101,7 @@
 </li>
 
 
-@endif
+
 <!-- Nav Item - Pages Collapse Menu (FIR) -->
 
 <li class="nav-item">
@@ -120,6 +122,7 @@
         </div>
     </div>
 </li>
+@endif
 
 <!-- Nav Item - Pages Collapse Menu (Charge Sheet) -->
 
@@ -127,11 +130,12 @@
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsefifth"
         aria-expanded="true" aria-controls="collapsefifth">
         <i class="fas fa-fw fa-cog"></i>
-        <span>Charge Sheet</span>
+        <span>Chargesheet</span>
     </a>
     <div id="collapsefifth" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Components:</h6>
+            
             <a class="collapse-item" href="{{route('chargesheet.list')}}">New Charge Sheet</a>
             <a class="collapse-item" href="{{route('chargesheet.complete')}}">Completed Chargesheet</a>
         </div>

@@ -17,9 +17,30 @@ class PoliceController extends Controller
     public function storeForm(Request $request)
     {
 
+
+        $file_name='';
+        if($request->has('image')) 
+        {
+            $avatar = $request->file('image');
+
+         
+            $file_name = date('Ymdhms').'.' . $avatar->getClientOriginalExtension();
+           
+            $avatar->storeAs('user', $file_name);
+        }
+
         $request->validate([
-            
-        
+            'name'=> 'required',
+            'station'=> 'required',
+            'role'=> 'required',
+            'email'=> 'required',
+            'address'=> 'required',
+            'nid'=> 'required|min:10',
+            'age'=> 'required',
+            'gender'=> 'required',
+            'password'=> 'required',
+            'image'=> 'required',
+          
 
         ]);
            //dd($request->all());
@@ -33,6 +54,7 @@ class PoliceController extends Controller
            $users->address = $request->address;
            $users->gender = $request->gender;
            $users->password = bcrypt($request->password);
+           $users->image =  ($request->image);
            $users->save();
            return redirect()->back()->with('message','Police Registration Done Successfully');
     }

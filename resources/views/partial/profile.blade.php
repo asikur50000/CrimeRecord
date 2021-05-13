@@ -106,12 +106,15 @@
     <div class="container emp-profile">
         <form method="post">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="profile-img">
-                       <!-- <img src="" alt="photo is missing">  -->
-                       
-                    </div>
-                </div>
+                <div class="container emp-profile">
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="profile-img">
+                                    <img src="{{ url('/uploads' . auth()->user()->image) }}" alt="Photo is missing">
+                                   
+                                </div>
+                            </div>
                     
                     <div class="col-md-6">
                             <div class="profile-head">

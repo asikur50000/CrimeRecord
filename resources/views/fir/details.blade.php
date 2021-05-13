@@ -29,33 +29,33 @@
                
 
             <tr>
-                <th scope="col">Serial No</th>
-                <td>#</td>
+                
                 <th scope="col">Police Station</th>
                 <td>{{optional($fir->station)->name}}</td>
                 <th scope="col">Crime Type</th>
                 <td>{{optional($fir->category)->categoryname}}</td>
                 
-            </tr>
-            <tr>
+          
+        
                 <th scope="col">Name of Accused</th>
                 <td>{{$fir->nameofaccused}}</td>
+            </tr>
+         <tr>
                 <th scope="col">Victim Name</th>
                 <td>{{$fir->name}}</td>
                 <th scope="col">Purpose of Applying FIR</th>
                 <td>{{$fir->purposeofapplyingfir}}</td>
-            </tr>
-            <tr>
+            
                 <th scope="col">Mobile Number</th>
                 <td>{{$fir->mobilenumber}}</td>
+            </tr>
+            <tr>
                 <th scope="col">Address</th>
                 <td>{{$fir->address}}</td>
                 <th scope="col">Email</th>
                 
                 <td>{{$fir->email}}</td>
                 
-            </tr>
-            <tr>
                 <th scope="col">Date of FIR</th>
                 <td>
                     @if(isset($fir->created_at))
@@ -65,13 +65,6 @@
                     @endif
                 </td>
             
-                <td>
-                    @if(isset($fir->created_at))
-                    {{ $fir->created_at->format('d/m/Y')}}
-                    @else
-                    {{'-'}}
-                    @endif
-                </td>
                 
             </tr>    
                
@@ -105,12 +98,12 @@
         @csrf
         <div class="form-group">
             <label for="remark">Remark</label>
-            <textarea type="text" name="remark" class="form-control" id="remark" placeholder="Maximum 50 Character" cols="20" rows="5"></textarea>
+            <textarea type="text" name="remark" class="form-control" id="remark" placeholder="" cols="20" rows="5"></textarea>
           </div>
 
           <div class="form-group">
             <label for="fir_no">FIR No.</label>
-            <input type="text" class="form-control" id="fir_no" placeholder="Maximum 5 Character" name="fir_no" value="">
+            <input type="text" class="form-control" id="fir_no" placeholder="" name="fir_no" value="">
         </div>
        <div class="form-group">
            <label for="status">Status</label>

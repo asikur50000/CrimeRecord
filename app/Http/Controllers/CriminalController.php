@@ -31,12 +31,16 @@ class CriminalController extends Controller
         }
 
         $request->validate([
-            'criminalage'=> 'required|max:2',
+            'criminalage'=> 'required',
+            'criminalname'=> 'required',
+            'criminaldateofbirth'=> 'required',
+            'crimedate'=> 'required',
+            'crimetime'=> 'required',
+            'criminaldateofbirth'=> 'required',
             'mobilenumber'=> 'required|min:10',
-            'criminalname'=> 'required|max:20',
-            'zipcode'=> 'required|max:4',
-            'crimecity'=> 'required|max:20',
-           // 'crimimalheight'=> 'required|max:3',
+            'zipcode'=> 'required',
+            'crimecity'=> 'required',
+            
 
         ]);
            //dd($request->all());
