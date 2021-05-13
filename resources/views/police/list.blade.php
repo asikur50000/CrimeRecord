@@ -18,7 +18,7 @@
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Station Name</th>
+                
                 <th scope="col">Police Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Mobile</th>
@@ -30,26 +30,21 @@
             </tr>
             </thead>
             <tbody>
-                @foreach($polices as $key => $police)
+                @foreach($users as $key => $user)
 
             <tr>
-                <th scope="row">{{ $key+1 }}</th>
-                <td>{{$police->station->name}}</td>
-                <td>{{$police->policename}}</td>
-                <td>{{$police->email}}</td>
-                <td>{{$police->mobile}}</td>
-                <td>{{$police->address}}</td>
+                @if($user->role == 'Police')
+                <th scope="row">#</th>
+           
+                <td>{{$user->name}}</td>
+                <td>{{$user->email}}</td>
+                <td>{{$user->mobile}}</td>
+                <td>{{$user->address}}</td>
                 
+                <th> view</th>
                 
-                
-
-                <td>
-                    <a class="btn btn-primary" href="{{ route('edit.police',$police->id) }}">Edit</a>
-                    <a class="btn btn-danger" onclick="return confirm('Are you sure?')"  href="{{ route('delete.police',$police->id) }}">Delete</a>
-{{--                    <a class="btn btn-warning" href="">View</a>--}}
-           {{--     <a class="btn btn-success" href="rou }}te('category.all.products',$category->id)}}">View all Prison Cell</a> --}}
-
-                </td>
+               @endif
+              
             </tr>
             @endforeach
             </tbody>
@@ -57,7 +52,7 @@
 
 
         </table>
-        {{ $polices->links() }}
+        {{ $users->links() }}
     </div>
 
     @stop

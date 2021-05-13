@@ -108,7 +108,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="profile-img">
-                                <img src="{{ asset('storage/uploads/criminal/' .$criminal->image) }}" alt="photo is missing">
+                                <img src="{{ url('/uploads/criminal/' .$criminal->image) }}" alt="photo is missing">
                                
                             </div>
                         </div>

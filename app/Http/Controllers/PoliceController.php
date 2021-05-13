@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Police;
 use App\Models\Station;
+use App\Models\User;
 
 use Illuminate\Http\Request;
 
@@ -17,28 +18,29 @@ class PoliceController extends Controller
     {
 
         $request->validate([
-            'mobile'=> 'required|min:10',
-            'policename'=> 'required|max:20',
-            'address'=> 'required|max:50',
+            
         
 
         ]);
            //dd($request->all());
-           $polices = new Police();
-           $polices->station_id = $request->policestation;
-           $polices->policename = $request->policename;
-           $polices->email = $request->email;
-           $polices->mobile = $request->mobile;
-           $polices->address = $request->address;
-         //  $polices->password = $request->password;
-           $polices->save();
-           return redirect()->back()->with('message','Added Successfully');
+           $users = new User();
+           $users->name = $request->name;
+           $users->station = $request->station;
+           $users->role = $request->role;
+           $users->email = $request->email;
+           $users->nid = $request->nid;
+           $users->age = $request->age;
+           $users->address = $request->address;
+           $users->gender = $request->gender;
+           $users->password = bcrypt($request->password);
+           $users->save();
+           return redirect()->back()->with('message','Police Registration Done Successfully');
     }
     public function showList()
     {
          
-         $polices = Police::paginate(5);
-         return view('police.list',compact('polices'));
+         $users = User::paginate(5);
+         return view('police.list',compact('users'));
     }
 
     //delete 

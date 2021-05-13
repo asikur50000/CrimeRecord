@@ -26,7 +26,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Mobile Number</th>
                 <th scope="col">Email</th>
-                <th scope="col"> FIR Status</th>
+                <th scope="col"> Chargesheet Status</th>
                 
                 
                 <th scope="col">Action</th>
@@ -38,14 +38,14 @@
             <tbody>
                 @foreach($firs as $key => $fir)
             <tr>
-                @if($fir->status == 'Approved')
+                @if($fir->status == 'Approved' && $fir->chargesheet_status == 'Pending')
                 <td>{{$fir->fir_no}}</td>
                 <td>{{$fir->station->name}}</td>
                 <td>{{$fir->name}}</td>
                 <td>{{$fir->mobilenumber}}</td>
                 <td>{{$fir->email}}</td>
                
-                <td style="color: green" >{{$fir->status}}</td>  
+                <td style="color: green" >{{$fir->chargesheet_status}}</td>  
 
                <td> 
                          <a class="btn btn-info" href="{{ route('chargesheet.edit',$fir->id,) }}">Take Action</a> 

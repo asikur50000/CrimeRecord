@@ -26,13 +26,13 @@
             
             </thead>-->
             <tbody>
-                @foreach($firs as $key => $fir)
+               
 
             <tr>
-                <th scope="col">Serial No.</th> 
-                <th scope="row">{{ $key+1 }}</th>
+                <th scope="col">Serial No</th>
+                <td>#</td>
                 <th scope="col">Police Station</th>
-                <td>{{$fir->station->name}}</td>
+                <td>{{optional($fir->station)->name}}</td>
                 <th scope="col">Crime Type</th>
                 <td>{{optional($fir->category)->categoryname}}</td>
                 
@@ -144,13 +144,13 @@
 
                 </td>
             </tr>
-            @endforeach
+           
             </tbody>
 
 
 
         </table>
-        {{ $firs->links() }}
+        
     </div>
 
     @stop

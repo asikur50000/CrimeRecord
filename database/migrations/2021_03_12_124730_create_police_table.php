@@ -18,7 +18,7 @@ class CreatePoliceTable extends Migration
             $table->integer('station_id');
             $table->string('policename');
             $table->string('email');
-            $table->integer('mobile');
+            $table->bigInteger('mobile');
             $table->string('address');
            // $table->string('password');
             $table->timestamps();

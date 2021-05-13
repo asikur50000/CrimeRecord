@@ -45,7 +45,7 @@ class UserController extends Controller
         $request->validate([
             'name'=> 'required',
             'email'=> 'required',
-            'username'=> 'required',
+           
             'nid'=> 'required|min:10',
             'age'=> 'required',
             'gender'=> 'required',
@@ -56,6 +56,7 @@ class UserController extends Controller
            //dd($request->all());
            $users = new User();
            $users->name = $request->name;
+           $users->role = $request->role;
            $users->email = $request->email;
            $users->username = $request->username;
            $users->nid = $request->nid;
@@ -64,7 +65,7 @@ class UserController extends Controller
            $users->gender = $request->gender;
            $users->password = bcrypt($request->password);
            $users->save();
-           return redirect(route('admin.login'))->with('message','Registration Successfully');
+           return redirect()->back()->with('message','Registration Successfully');
     }
 
     public function profile()

@@ -19,12 +19,19 @@
 
 
 
-<form method="post" action="{{route('police.store')}}">
+<form method="post" action="{{route('admin.storeRegistration')}}">
 @csrf
 
+<div class="form-group">
+  <label for="role">Role</label>
+  <select id="role" required name="role" class="form-control">
+    <option selected>Police</option>
+  </select>
+</div>
+
   <div class="form-group">
-    <label for="policestation">Police Station</label>
-    <select class="form-control" name="policestation" id="policestation">
+    <label for="station">Police Station</label>
+    <select class="form-control" name="station" id="station">
       <option selected>Choose...</option>
         @foreach ($stations as $station)
         <option value="{{$station->id}}">{{$station->name}}</option>
@@ -33,21 +40,45 @@
   </div>
 
   <div class="form-group">
-    <label for="policename">Police Name</label>
-    <input type="text" name="policename" class="form-control" id="policename" placeholder="Maximum 20 Character">
+    <label for="name">Police Name</label>
+    <input type="text" name="name" class="form-control" id="name" placeholder="Maximum 20 Character">
   </div>
+
+ 
+
   <div class="form-group">
     <label for="email">Email</label>
     <input type="Email" name="email" class="form-control" id="email" placeholder="Type Email">
   </div>
   <div class="form-group">
-    <label for="mobile">Mobile Number</label>
-    <input type="number" name="mobile" class="form-control" id="mobile" placeholder="Minimum 10 Digit">
+    <label for="nid">Nid</label>
+    <input type="number" name="nid" class="form-control" id="nid" placeholder="Type NID of Police Officer">
   </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="number" name="age" class="form-control" id="age" placeholder="Type Police Officer Age">
+  </div>
+
   <div class="form-group">
     <label for="address">Address</label>
     <input type="text" name="address" class="form-control" id="address" placeholder="Maximum 50 Character">
   </div>
+
+  <div class="form-group">
+    <label for="gender">Gender</label>
+    <select id="gender" required name="gender" class="form-control">
+      <option selected>Choose...</option>
+      <option>male</option>
+      <option>female</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" name="password" class="form-control" id="password" placeholder="Provide Initial Password for POlice Officer">
+  </div>
+
+
   <!--
   <div class="form-group">
     <label for="password">*Password</label>

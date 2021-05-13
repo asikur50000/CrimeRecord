@@ -49,10 +49,10 @@ class FirController extends Controller
          $firs = fir::paginate(5);
          return view('fir.list',compact('firs'));
     }
-    public function showDetails()
+    public function showDetails($id)
     {
-        $firs = fir::paginate(5);
-         return view('fir.details',compact('firs'));
+        $fir = fir::findorFail($id);
+         return view('fir.details',compact('fir'));
     }
 
     //Delete method

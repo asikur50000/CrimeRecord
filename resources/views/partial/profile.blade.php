@@ -117,6 +117,8 @@
                             <div class="profile-head">
                                         <h5 style="color:lightseagreen">
                                             <span style="font-weight: bold"> Name: {{ auth()->user()->name }}</span>
+                                            <br>
+                                             Role: {{ auth()->user()->role }}
                                           
                                         </h5>
                                         <h6>

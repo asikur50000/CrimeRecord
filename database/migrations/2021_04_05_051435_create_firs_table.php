@@ -30,7 +30,7 @@ class CreateFirsTable extends Migration
             $table->string('sectionoflaw')->nullable();
             $table->string('officer')->nullable();
             $table->string('investigationdetails')->nullable();
-            $table->string('chargesheet_status')->nullable();
+            $table->string('chargesheet_status')->default('Pending');
             $table->timestamps();
         });
     }

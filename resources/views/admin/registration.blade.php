@@ -45,7 +45,15 @@
                     <h2 class="title">Registration Form</h2>
                     <form method="POST" action="{{ route('admin.storeRegistration') }}">
                         @csrf
+                        <div class="form-group">
+                            <label for="role">Role</label>
+                            <select id="role" required name="role" class="form-control">
+                              <option selected>user</option>
+                            </select>
+                          </div>
+
                         <div class="row row-space">
+                           
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="name">Name</label>
@@ -72,16 +80,11 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="gender">Gender</label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Female
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
+                                    <select id="gender" required name="gender" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>male</option>
+                                        <option>female</option>
+                                      </select>
                                 </div>
                             </div>
                         </div>

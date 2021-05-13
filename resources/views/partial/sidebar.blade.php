@@ -25,7 +25,7 @@
 <div class="sidebar-heading">
     
 </div>
-@if(Auth::check() && Auth::user()->role  == "admin" || Auth::user()->role  == "police")
+@if(Auth::check() && Auth::user()->role  == "admin" )
 <!-- Nav Item - Pages Collapse Menu (Police Station) -->
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -58,8 +58,9 @@
     </div>
 </li>
 
+@endif
 <!-- Crime Record Crime Category collapse menu-->
-
+@if(Auth::check() && Auth::user()->role  == "admin" || Auth::user()->role  == "Police")
  
     <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree"
@@ -113,7 +114,7 @@
                         
             <a class="collapse-item" href="{{route('fir.form')}}">FIR Form</a>
             <a class="collapse-item" href="{{route('fir.list')}}">FIR History</a>
-           <!-- <a class="collapse-item" href="{{route('fir.details')}}">FIR Details</a>-->
+           <!-- <a class="collapse-item" href="#">FIR Details</a>-->
             
            
         </div>

@@ -97,7 +97,7 @@ Route::get('criminal/list',[CriminalController::class,'showList'])->name('crimin
 Route::get('fir/form',[FirController::class,'showForm'])->name('fir.form');
 Route::post('fir/store',[FirController::class,'storeForm'])->name('fir.store');
 Route::get('fir/list',[FirController::class,'showList'])->name('fir.list');
-Route::get('fir/details',[FirController::class,'showDetails'])->name('fir.details');
+Route::get('fir/details/{id}',[FirController::class,'showDetails'])->name('fir.details');
 Route::get('chargesheet/list',[FirController::class,'showChargesheet'])->name('chargesheet.list');
 Route::get('chargesheet/edit/{id}',[FirController::class,'editChargesheet'])->name('chargesheet.edit');
 Route::post('chargesheet/edit/{id}',[FirController::class,'updateChargesheet'])->name('chargesheet.update');
