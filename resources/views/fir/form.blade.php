@@ -58,16 +58,25 @@
     <label for="name"> Victim Name</label>
     <input type="text" name="name" class="form-control" id="name" placeholder="">
   </div>
+
+  <div class="form-group">
+    <label for="gender">Victim Gender</label>
+    <select id="gender" required name="gender" class="form-control">
+      <option selected>Choose...</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </div>
   <div class="form-group">
     <label for="mobilenumber">Victim Mobile Number</label>
     <input type="number" name="mobilenumber" class="form-control" id="mobilenumber" placeholder="">
   </div>
   <div class="form-group">
-    <label for="address">Address</label>
+    <label for="address">Victim Address</label>
     <input type="text" name="address" class="form-control" id="address" placeholder="">
   </div>
   <div class="form-group">
-    <label for="email">Email</label>
+    <label for="email">Victim Email</label>
     <input type="text" name="email" class="form-control" id="email" placeholder="">
   </div>
    <!--

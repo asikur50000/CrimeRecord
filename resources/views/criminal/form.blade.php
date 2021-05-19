@@ -34,7 +34,16 @@
 
   <div class="form-group">
     <label for="criminalheight">Criminal Height(cm)</label>
-    <input type="number" name="criminalheight" class="form-control" id="criminalheight" placeholder="">
+    <input type="float" name="criminalheight" class="form-control" id="criminalheight" placeholder="">
+  </div>
+  
+  <div class="form-group">
+    <label for="gender">Criminal Gender</label>
+    <select id="gender" required name="gender" class="form-control">
+      <option selected>Choose...</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
   </div>
   
   <div class="form-group">

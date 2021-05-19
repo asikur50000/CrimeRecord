@@ -108,14 +108,14 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="profile-img">
-                                <img src="{{ url('/uploads/criminal/' .$criminal->image) }}" alt="photo is missing">
+                                <img src="" alt="photo is missing">
                                
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="profile-head">
                                         <h5 style="font-weight: bold">
-                                           Criminal Name : {{ $criminal->criminalname}}
+                                           Police Name : {{ $user->name}}
                                         </h5>
                                         <h6>
                                            
@@ -140,74 +140,51 @@
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Criminal Age</label>
+                                                    <label>Police Age</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p> {{ $criminal->criminalage}}</p>
+                                                    <p> {{ $user->age}}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Criminal Height</label>
+                                                    <label>Police NID</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p> {{ $criminal->criminalheight}}</p>
+                                                    <p> {{ $user->nid}}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Criminal Emergency Contact Number</label>
+                                                    <label>Police Gender</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>{{ $criminal->mobilenumber}}</p>
+                                                    <p>{{ $user->gender}}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Crime Date</label>
+                                                    <label>Police Email</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>{{ $criminal->crimedate}}</p>
+                                                    <p>{{ $user->email}}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Crime Time</label>
+                                                    <label>Police Address</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>{{ $criminal->crimetime}}</p>
+                                                    <p>{{ $user->address}}</p>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Crime City</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>{{ $criminal->crimecity}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Crime Area Zip Code</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>{{ $criminal->zipcode}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Crime Type</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>{{$criminal->category->categoryname}}</p>
-                                                </div>
-                                            </div>
+                                          
                                               <div class="row">
                                                 <div class="col-md-6">
                                                     <label>Police Station</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p> {{$criminal->station->name}}</p>
+                                                    <p> {{$user->station->name}}</p>
                                                 </div>
                                             </div>
     

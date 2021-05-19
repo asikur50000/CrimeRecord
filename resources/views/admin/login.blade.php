@@ -335,7 +335,7 @@
       
       <br>
       <a class="btn btn-info" href="http://localhost/CrimeRecord/public/">Home Page</a>
-      <a class="btn btn-info" href="{{ route('admin.registration') }}">Registration Here</a>         
+      <a class="btn btn-info" href="{{ route('admin.registration') }}">User Registration</a>         
     </div>
     
      

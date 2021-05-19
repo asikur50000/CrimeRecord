@@ -41,6 +41,7 @@ class CriminalController extends Controller
             'zipcode'=> 'required',
             'crimecity'=> 'required',
             
+            
 
         ]);
            //dd($request->all());
@@ -53,6 +54,7 @@ class CriminalController extends Controller
            $criminals->mobilenumber = $request->mobilenumber;
            $criminals->crimetime = $request->crimetime;
            $criminals->zipcode = $request->zipcode;
+           $criminals->gender = $request->gender;
            $criminals->crimecity = $request->crimecity;
            $criminals->criminalage = $request->criminalage;
            $criminals->criminalheight = $request->criminalheight;

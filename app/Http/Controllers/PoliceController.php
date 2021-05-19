@@ -52,7 +52,6 @@ class PoliceController extends Controller
            $users->nid = $request->nid;
            $users->age = $request->age;
            $users->address = $request->address;
-           $users->gender = $request->gender;
            $users->password = bcrypt($request->password);
            $users->image =  ($request->image);
            $users->save();

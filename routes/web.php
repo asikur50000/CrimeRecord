@@ -142,6 +142,7 @@ Route::post('fir/form/{id}',[FirController::class,'updateFir'])->name('update.fi
 
 //view 
 Route::get('criminal/view/{id}',[CriminalController::class,'viewCriminal'])->name('view.criminal');
+Route::get('police/view/{id}',[UserController::class,'viewPolice'])->name('view.police');
 
 
 

@@ -44,7 +44,7 @@
                 <td>{{$user->gender}}</td>
                 
                 <td>
-                    <a class="btn btn-success" href="{{ route('view.criminal',$user->id) }}">View</a>
+                    <a class="btn btn-success" href="{{ route('view.police',$user->id) }}">View</a>
                 
                @endif
               

@@ -84,7 +84,10 @@ class UserController extends Controller
         {
             return view('partial.profile');
         }
-
+        public function viewPolice()
+        {
+            return view('view.police');
+        }
 
 
 

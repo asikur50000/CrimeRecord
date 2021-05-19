@@ -19,12 +19,12 @@
             
                 <th scope="col">#</th>
                 
-                <th scope="col">Police Station</th>
+                <th scope="col">Police Station Name</th>
                 <th scope="col">Victim Name</th>
-                <th scope="col">Mobile Number</th>
-                <th scope="col">Address</th>
-                <th scope="col">Email</th>
-                <th scope="col">Status</th>
+                <th scope="col">Victim Number</th>
+                <th scope="col">Accused Person Name</th>
+                <th scope="col">Victim Email</th>
+                <th scope="col">FIR Status</th>
                 
                 
                 <th scope="col">Action</th>
@@ -40,7 +40,7 @@
                 <td>{{optional($fir->station)->name}}</td>
                 <td>{{$fir->name}}</td>
                 <td>{{$fir->mobilenumber}}</td>
-                <td>{{$fir->address}}</td>
+                <td>{{$fir->nameofaccused}}</td>
                 <td>{{$fir->email}}</td>
                 <td>{{$fir->status}}</td>
                
