@@ -43,17 +43,17 @@ class PoliceController extends Controller
           
 
         ]);
-           //dd($request->all());
+           
            $users = new User();
            $users->name = $request->name;
-           $users->station = $request->station;
+           $users->station_id = $request->policestation;
            $users->role = $request->role;
            $users->email = $request->email;
            $users->nid = $request->nid;
            $users->age = $request->age;
            $users->address = $request->address;
            $users->password = bcrypt($request->password);
-           $users->image =  ($request->image);
+           $users->image = $file_name;
            $users->save();
            return redirect()->back()->with('message','Police Registration Done Successfully');
     }

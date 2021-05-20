@@ -22,6 +22,7 @@ class CreateCriminalsTable extends Migration
             $table->string('mobilenumber');
             $table->string('crimetime');
             $table->string('zipcode');
+            $table->string('gender');
             $table->integer('criminalage');
             $table->integer('criminalheight');
             $table->string('crimecity');

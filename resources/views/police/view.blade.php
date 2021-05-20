@@ -108,7 +108,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="profile-img">
-                                <img src="" alt="photo is missing">
+                                <img src="{{ url('/uploads/user/' .$user->image) }}" alt="photo is missing">
                                
                             </div>
                         </div>
@@ -184,7 +184,7 @@
                                                     <label>Police Station</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p> {{$user->station->name}}</p>
+                                                    <p>{{optional($user->station)->name}}</p>
                                                 </div>
                                             </div>
     

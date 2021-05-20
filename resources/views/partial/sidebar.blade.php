@@ -118,6 +118,7 @@
 
 
 <!-- Nav Item - Pages Collapse Menu (FIR) -->
+@endif
 
 
 
@@ -141,8 +142,7 @@
     </div>
 </li>
 
-@endif
-
+@if(Auth::check() && Auth::user()->role  == "admin" || Auth::user()->role  == "Police")
 <!-- Nav Item - Pages Collapse Menu (Charge Sheet) -->
 
 <li class="nav-item">
@@ -161,7 +161,7 @@
     </div>
 </li>
 
-
+@endif
 <hr class="sidebar-divider">
 
 

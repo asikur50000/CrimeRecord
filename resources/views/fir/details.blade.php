@@ -70,10 +70,9 @@
                
                
                 
-                
+            @if(Auth::check() && Auth::user()->role  == "admin" || Auth::user()->role  == "Police")       
                
                 <td class="text-align: center">
-
 
                    <!-- Take action modal will be here-->
                    
@@ -136,6 +135,7 @@
 
 
                 </td>
+                @endif
             </tr>
            
             </tbody>

@@ -49,16 +49,17 @@
                
                 
                 
-
                 <td>
 
 
                     <a class="btn btn-success" href="{{ route('fir.details',$fir->id) }}">View</a>
 
+                    @if(Auth::check() && Auth::user()->role  == "admin" || Auth::user()->role  == "Police")
                     <a class="btn btn-danger" onclick="return confirm('Are you sure?')"  href="{{ route('delete.fir',$fir->id) }}">Delete</a>
-
+                    @endif
 
                 </td>
+               
             </tr>
             @endforeach
             </tbody>

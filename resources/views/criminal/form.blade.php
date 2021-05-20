@@ -34,7 +34,7 @@
 
   <div class="form-group">
     <label for="criminalheight">Criminal Height(cm)</label>
-    <input type="float" name="criminalheight" class="form-control" id="criminalheight" placeholder="">
+    <input type="number" name="criminalheight" class="form-control" id="criminalheight" placeholder="">
   </div>
   
   <div class="form-group">

@@ -19,7 +19,7 @@
 
 
 
-<form method="post" action="{{route('admin.storeRegistration')}}"enctype="multipart/form-data">
+<form method="post" action="{{route('admin.storeRegistration')}}" enctype="multipart/form-data">
 @csrf
 
 <div class="form-group">
@@ -30,8 +30,8 @@
 </div>
 
   <div class="form-group">
-    <label for="station">Police Station</label>
-    <select class="form-control" name="station" id="station">
+    <label for="policestation">Police Station</label>
+    <select class="form-control" name="policestation" id="policestation">
       <option selected>Choose...</option>
         @foreach ($stations as $station)
         <option value="{{$station->id}}">{{$station->name}}</option>

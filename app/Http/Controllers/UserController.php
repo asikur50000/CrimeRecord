@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Station;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -69,7 +71,7 @@ class UserController extends Controller
            $users->name = $request->name;
            $users->role = $request->role;
            $users->email = $request->email;
-           $users->image = $request->image;
+           $users->image = $file_name;
            $users->username = $request->username;
            $users->nid = $request->nid;
            $users->age = $request->age;
@@ -84,9 +86,15 @@ class UserController extends Controller
         {
             return view('partial.profile');
         }
-        public function viewPolice()
-        {
-            return view('view.police');
+        public function viewPolice($id)
+        {  
+           
+        
+            return view('police.view',
+            [
+                  'user'=>User::findorFail($id)
+                     
+            ]);
         }
 
 

@@ -21,6 +21,7 @@ class CreateFirsTable extends Migration
             $table->string('name');
             $table->string('mobilenumber');
             $table->string('address');
+            $table->string('gender');
             $table->string('email');
             $table->string('fir_no')->nullable();
             $table->string('remark')->nullable();

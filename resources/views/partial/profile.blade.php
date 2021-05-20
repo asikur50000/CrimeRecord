@@ -111,8 +111,8 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="profile-img">
-                                    <img src="{{ url('/uploads' . auth()->user()->image) }}" alt="Photo is missing">
-                                   
+                                    <img src="{{ url('/uploads/user/' . auth()->user()->image) }}" alt="Photo is missing">
+                                    
                                 </div>
                             </div>
                     
