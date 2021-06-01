@@ -46,6 +46,7 @@
                     <form method="POST" action="{{ route('admin.storeRegistration') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
                             <label for="role">Role</label>
                             <select id="role" required name="role" class="form-control">
                               <option selected>user</option>
@@ -79,12 +80,17 @@
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="gender">Gender</label>
-                                    <select id="gender" required name="gender" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                      </select>
+                                    <label class="label">Gender</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">Male
+                                            <input type="radio" checked="checked" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Female
+                                            <input type="radio" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -116,17 +122,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-2">
-                            <div class="input-group">
-                            <label for="image">Your Picture</label>
-                            <input type="file" name="image" class="form-control" value="" id="image" placeholder="">
-                          </div>
-                        </div>
+                        
                         <div class="col-2">
                             <div class="input-group">
                                 <label class="password">Password</label>
                                 <input class="input--style-4" type="password" name="password">
                             </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                            <label for="image">Your Picture</label>
+                            <input type="file" name="image" class="form-control" value="" id="image" placeholder="">
+                          </div>
                         </div>
                     
                        

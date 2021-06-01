@@ -14,7 +14,6 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="{{ route('admin.registration') }}">Registration</a></li>
-              
                 <li><a href="{{ route('admin.login') }}">Admin</a></li>   
                 <li><a href="{{ route('admin.login') }}">Police</a></li>   
                 <li><a href="{{ route('admin.login') }}">User</a></li>   
