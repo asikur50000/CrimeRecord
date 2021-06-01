@@ -179,14 +179,14 @@
                                                 </div>
                                             </div>
                                           
-                                              <div class="row">
+                                             <!-- <div class="row">
                                                 <div class="col-md-6">
                                                     <label>Police Station</label>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <p>{{optional($user->station)->name}}</p>
                                                 </div>
-                                            </div>
+                                            </div> -->
     
     
     

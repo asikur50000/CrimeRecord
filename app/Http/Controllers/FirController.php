@@ -22,7 +22,7 @@ class FirController extends Controller
             'mobilenumber'=> 'required|min:10',
             'nameofaccused'=> 'required',
             'name'=> 'required',
-            'mobilenumber'=> 'required',
+            'mobilenumber'=> 'required|min:10',
             'address'=> 'required',
             'purposeofapplyingfir'=> 'required',
             
@@ -34,6 +34,7 @@ class FirController extends Controller
            $firs->category_id = $request->crimetype;
            $firs->nameofaccused = $request->nameofaccused;
            $firs->name = $request->name;
+           $firs->gender = $request->gender;
            $firs->mobilenumber = $request->mobilenumber;
            $firs->address = $request->address;
            //$firs->relationwithaccusedperson = $request->relationwithaccusedperson;
