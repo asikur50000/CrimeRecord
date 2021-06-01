@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
             'age'=>'25',
             'address'=>'Motijheel-1000',
             'gender'=>'male',
-            'email'=>'admin@mail.com',
+            'email'=>'ashik@mail.com',
             'password'=>bcrypt('123')
             
         ]);
