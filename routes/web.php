@@ -104,7 +104,9 @@ Route::post('chargesheet/edit/{id}',[FirController::class,'updateChargesheet'])-
 
 Route::get('chargesheet/complete',[FirController::class,'showComplete'])->name('chargesheet.complete');
 
-//route for Chargesheet processing
+//route for Dashboard processing
+
+Route::get('dashboard/view',[DashboardController::class,'showDashboard'])->name('dashboard.view');
 
 //Route::get('chargesheet/list',[ChargesheetController::class,'showList'])->name('chargesheet.list');
 
@@ -138,6 +140,9 @@ Route::post('criminal/form/{id}',[CriminalController::class,'updateCriminal'])->
 
 
 Route::post('fir/form/{id}',[FirController::class,'updateFir'])->name('update.fir');
+
+Route::get('/user/edit/{id}',[UserController::class,'editProfile'])->name('edit.profile');
+Route::post('/user/update/{id}',[UserController::class,'updateProfile'])->name('update.profile');
 
 
 //view 

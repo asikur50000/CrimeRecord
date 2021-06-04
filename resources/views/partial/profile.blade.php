@@ -111,7 +111,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="profile-img">
-                                    <img src="{{ url('/uploads/user/' . auth()->user()->image) }}" alt="Photo is missing">
+                                    <img src="{{ url('/uploads/user/' .auth()->user()->image) }}" alt="Photo is missing">
                                     
                                 </div>
                             </div>
@@ -136,7 +136,9 @@
                                 </ul>
                             </div>
                         </div>
-                     
+                        <div class="col-md-2">
+                            <a href="{{ route('edit.profile',auth()->user()->id) }}">Edit Profile</a>
+                          </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">

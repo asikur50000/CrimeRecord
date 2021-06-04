@@ -21,7 +21,7 @@ class UserController extends Controller
            $login = $request->only('email','password');
            if (Auth::attempt($login)) {
                $request->session()->regenerate();
-               return redirect()->route('dashboard')->with('message','Login Success!!');
+               return redirect()->route('dashboard.view')->with('message','Login Success!!');
            }
            else
            {
@@ -96,8 +96,49 @@ class UserController extends Controller
                      
             ]);
         }
+         
+        public function editProfile($id)
+        {
+             $user = User::find($id);
+    
+    
+            return view('partial.update',compact('user'));
+        }
+        
+        public function updateProfile(Request $request,$id)
+        {
+             //dd($request->all());
+        $request->validate([
+            'name'=>'required',
+            'username'=>'required',
+            'nid'=>'required',
+            'email'=>'required|email',
+            
+            'age'=>'required',  
+            'gender'=>'required',
+        ]);
+        $file_name='';
+        if($request->has('image')) 
+        {
+            $avatar = $request->file('image');
+            $file_name = date('Ymdhms').'.' . $avatar->getClientOriginalExtension();
+            
+            $avatar->storeAs('user', $file_name);
+        }
+        $users =  User::find($id);
+        $users->name =$request->name;
+        $users->username =$request->username;
+        $users->nid =$request->nid;
+        $users->age =$request->age;
+        $users->address =$request->address;
+        $users->gender =$request->gender;
+        $users->email =$request->email;
+        $users->image=$file_name;
+        $users->save();
 
-
+    return redirect(route('partial.profile',$users->id))->with('message','Profile Updated Successfully.');
+    }
+        
 
 
 }
