@@ -34,6 +34,8 @@
                 </div>
             </div>
         </div>
+     
+        @endif
         <div class="col-xl-3 col-md-6">
             <div class="card bg-danger text-white mb-4">
                 <div class="card-body">Total FIR</div>
@@ -55,7 +57,8 @@
         </div>
       
     </div>
+   
     
 </div>
-@endif
+
 @stop
