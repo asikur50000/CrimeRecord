@@ -20,11 +20,16 @@ class DashboardController extends Controller
         $stations = Station::count('id');
         $users = User::where('role', '=', 'Police')->count('id');
         $criminals = Criminal::count('id');
-        $firs = User::count('id');
+        $firs = Fir::count('id');
+        $chargesheets = Fir::where('status', '=', 'Approved')->count('id');
         
 
         return view('dashboard.view',[
-        'station' => $stations,'police' => $users,'criminal' => $criminals,'fir' => $firs,'chargesheet' => $firs
+        'station' => $stations,
+        'police' => $users,
+        'criminal' => $criminals,
+        'fir' => $firs,
+        'chargesheet' => $chargesheets,
          ] );
     }
 }
