@@ -10,6 +10,7 @@ use App\Http\Controllers\CriminalController;
 use App\Http\Controllers\FirController;
 use App\Http\Controllers\ChargesheetController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ReportController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -110,7 +111,9 @@ Route::get('dashboard/view',[DashboardController::class,'showDashboard'])->name(
 
 //Route::get('chargesheet/list',[ChargesheetController::class,'showList'])->name('chargesheet.list');
 
-
+// Route for report generate
+Route::get('/generate/report/criminal',[ReportController::class,'generateCriminalReport'])->name('generate.criminalreport');
+Route::get('/generate/report',[ReportController::class,'generateCrimeReport'])->name('generate.crimereport');
 
 //delete route
 
