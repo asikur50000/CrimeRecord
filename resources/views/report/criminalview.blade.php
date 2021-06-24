@@ -11,7 +11,7 @@
 
 <center> <button type="button" onclick="printDiv()" class="btn btn-success" style="margin-bottom: 50px;margin-top: 50px">Print</button></center>
 
-    <div id="printArea" style="background-color: greenyellow" >
+    <div id="printArea" style="background-color: skyblue " >
         <table class="table table_bordered table-hover">
             <thead>
 

@@ -13,32 +13,28 @@
 
     <div id="printArea" style="background-color: skyblue" >
         <table class="table table_bordered table-hover">
-            <thead>
-
-          
-            <th scope="col">Total Crime</th>
-            <th scope="col">Eveteasing</th>
-            <th scope="col">Personal Crime</th>
-            <th scope="col">Murder</th>
-           
-
-
-
-
-            </thead>
+            
             <tbody>
 
         
 
                 <tr>
                 
-
-        
-
+                    <th scope="col">Total Crime</th>
                     <td>{{$fir}}</td>
+                    <tr></tr>
+                    <th scope="col">Eveteasing</th>
                     <td>{{$eve}}</td>
+                    <tr></tr>
+                    <th scope="col">Personal Crime</th>
                     <td>{{$per}}</td>
+                    <tr></tr>
+                    <th scope="col">Murder</th>
                     <td>{{$murder}}</td>
+
+                    
+                   
+                   
                    
 
 

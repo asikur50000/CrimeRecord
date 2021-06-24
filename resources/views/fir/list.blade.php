@@ -54,6 +54,8 @@
 
                     <a class="btn btn-success" href="{{ route('fir.details',$fir->id) }}">View</a>
 
+                    <button type="button" onclick="printDiv()" class="btn btn-success">Print</button>
+
                     @if(Auth::check() && Auth::user()->role  == "admin" || Auth::user()->role  == "Police")
                     <a class="btn btn-danger" onclick="return confirm('Are you sure?')"  href="{{ route('delete.fir',$fir->id) }}">Delete</a>
                     @endif
@@ -61,6 +63,7 @@
                 </td>
                
             </tr>
+            
             @endforeach
             </tbody>
 
@@ -69,5 +72,14 @@
         </table>
         {{ $firs->links() }}
     </div>
+    <script type="text/javascript">
+        function printDiv(){
+            var printContents = document.getElementById("printArea").innerHTML;
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+    </script>
 
     @stop
