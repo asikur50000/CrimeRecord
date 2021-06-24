@@ -40,12 +40,22 @@ class ReportController extends Controller
         $eveteasing = Fir::where('category_id', '=', '2')->count('id');
         $personal = Fir::where('category_id', '=', '1')->count('id');
         $murders = Fir::where('category_id', '=', '3')->count('id');
+        $propertycrime = Fir::where('category_id', '=', '4')->count('id');
+        $childabuse = Fir::where('category_id', '=', '5')->count('id');
+        $cybercrime = Fir::where('category_id', '=', '6')->count('id');
+        $fraud = Fir::where('category_id', '=', '7')->count('id');
+        $rape = Fir::where('category_id', '=', '8')->count('id');
 
         return view('report.crimeview',[
                  'fir' => $firs, 
                  'eve' => $eveteasing,
                  'per' => $personal,
-                 'murder' => $murders,
+                 'murder' =>$murders,
+                 'propertycrime' =>$propertycrime,
+                 'childabuse' =>$childabuse,
+                 'cybercrime' =>$cybercrime,
+                 'fraud' =>$fraud,
+                 'rape' =>$rape,
         ]);
     }
 }

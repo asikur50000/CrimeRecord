@@ -22,8 +22,8 @@
 
                 <tr>
                 
-                    <th scope="col">Total Crime</th>
-                    <td>{{$fir}}</td>
+                    <th scope="col" style="color: brown">Total Crime</th>
+                    <td style="color: brown">{{$fir}}</td>
                     <tr></tr>
                     <th scope="col">Eveteasing</th>
                     <td>{{$eve}}</td>
@@ -33,6 +33,21 @@
                     <tr></tr>
                     <th scope="col">Murder</th>
                     <td>{{$murder}}</td>
+                    <tr></tr>
+                    <th scope="col">Property Crime</th>
+                    <td>{{$propertycrime}}</td>
+                    <tr></tr>
+                    <th scope="col">Child Abuse</th>
+                    <td>{{$childabuse}}</td>
+                    <tr></tr>
+                    <th scope="col">Cyber Crime</th>
+                    <td>{{$cybercrime}}</td>
+                    <tr></tr>
+                    <th scope="col">Fraud</th>
+                    <td>{{$fraud}}</td>
+                    <tr></tr>
+                    <th scope="col">Rape</th>
+                    <td>{{$rape}}</td>
 
                     
                    
