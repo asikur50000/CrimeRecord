@@ -57,11 +57,11 @@
   </div>
   <div class="form-group">
     <label for="nid">NID Number</label>
-    <input type="number" name="nid" class="form-control" id="nid" placeholder="">
+    <input type="number" name="nid"  class="form-control" id="nid" placeholder="">
   </div>
   <div class="form-group">
     <label for="age">Age</label>
-    <input type="number" name="age" class="form-control" id="age" placeholder="">
+    <input type="number" name="age"  class="form-control" id="age" placeholder="">
   </div>
 
   <div class="form-group">

@@ -48,7 +48,7 @@
   
   <div class="form-group">
     <label for="mobilenumber">Criminal Emergency Contact Number</label>
-    <input type="number" name="mobilenumber" class="form-control" id="mobilenumber" placeholder="">
+    <input type="number" name="mobilenumber"  class="form-control" id="mobilenumber" placeholder="">
   </div>
   <div class="form-group">
     <label for="criminaldateofbirth">Criminal Date of Birth</label>
@@ -74,7 +74,7 @@
   
   <div class="form-group">
     <label for="zipcode">Area Zip Code</label>
-    <input type="number" name="zipcode" class="form-control" id="zipcode" placeholder="">
+    <input type="number" name="zipcode"  class="form-control" id="zipcode" placeholder="">
   </div>
 
   <div class="form-group">
