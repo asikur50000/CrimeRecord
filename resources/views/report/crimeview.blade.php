@@ -8,10 +8,12 @@
         </div>
     @endif
 
+    
+
 
 <center> <button type="button" onclick="printDiv()" class="btn btn-success" style="margin-bottom: 50px;margin-top: 50px">Print</button></center>
-
-    <div id="printArea" style="background-color: skyblue" >
+<center><h1 >Crime Report</h1></center>
+    <div id="printArea" >
         <table class="table table_bordered table-hover">
             
             <tbody>

@@ -33,7 +33,7 @@ class PoliceController extends Controller
             'name'=> 'required',
             'station'=> 'required',
             'role'=> 'required',
-            'email'=> 'required',
+            'email'=> 'required','unique:users',
             'address'=> 'required',
             'nid'=> 'required|min:10',
             'age'=> 'required',

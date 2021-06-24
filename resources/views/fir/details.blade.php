@@ -16,7 +16,18 @@
         <p class="alert alert-danger">{{$er}}</p>
     @endforeach  
 @endif
+<center> <button type="button" onclick="printDiv()" class="btn btn-success" style="margin-bottom: 50px;margin-top: 50px">Print</button></center>
+<div id="printArea" >
 
+    <script type="text/javascript">
+        function printDiv(){
+            var printContents = document.getElementById("printArea").innerHTML;
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+    </script>
     <div class="row">
         <table class="table">
             <!--<thead>
@@ -68,7 +79,8 @@
                 
             </tr>    
                
-               
+  </div>             
+  </div>             
                 
             @if(Auth::check() && Auth::user()->role  == "admin" || Auth::user()->role  == "Police")       
                
@@ -78,6 +90,11 @@
                    
                    <div  style="text-align: center">
                    <a style="text-align: center"  class="btn btn-sm btn-info float-left " data-toggle="modal" data-target="#modal-<?php echo $fir->id;?>" value=<?php echo $fir->id;?> href="#">Take Action</a>
+                 
+                    
+
+                
+                
               
                    <!-- Modal -->
 <div class="modal fade" id="modal-<?php echo $fir->id;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -118,6 +135,7 @@
 
        </div>
        <div class="modal-footer">
+       
            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
            <input type="submit" value="submit" class="btn btn-primary">
    
@@ -127,6 +145,7 @@
    </div>
    </div>
 
+   
 
 
 

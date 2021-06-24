@@ -30,12 +30,11 @@
 @if(session()->has('message'))
     <p class="alert alert-success">{{session()->get('message')}}</p>
 @endif
-
-@if($errors->any())
-    @foreach($errors->all() as $er)
-        <p class="alert alert-danger">{{$er}}</p>
-    @endforeach  
-@endif
+@if ($errors->any())
+                    @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger">{{$error}}</div>
+                    @endforeach
+                @endif
 
 <body>
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">

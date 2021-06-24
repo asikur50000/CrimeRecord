@@ -7,11 +7,39 @@
             {{ session()->get('success') }}
         </div>
     @endif
+    <form action="{{route('generate.criminalreport')}}" method="GET">
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row" style="padding: 2px 47px;">
+
+                    <div class="form-group col-md-4">
+                        <label for="from"> Date from:</label>
+                        <input value="{{$fromDate}}" id="from" type="date" class="form-control" name="from_date">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="to"> Date to:</label>
+                        <input value="{{$toDate}}" id="to" type="date" class="form-control" name="to_date">
+                    </div>
+                    <div style="padding: 31px 2px;" class="form-group col-md-4">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                        <button type="button" onclick="printDiv()" class="btn btn-success">Print</button>
+
+                    </div>
+                </div>
+            </div>
 
 
-<center> <button type="button" onclick="printDiv()" class="btn btn-success" style="margin-bottom: 50px;margin-top: 50px">Print</button></center>
+        </div>
+    </form>
 
-    <div id="printArea" style="background-color: skyblue " >
+
+
+
+<center><h1 >Criminal Report</h1></center>
+<br>
+
+    <div id="printArea" >
         <table class="table table_bordered table-hover">
             <thead>
 
