@@ -37,7 +37,7 @@ class CriminalController extends Controller
             'crimedate'=> 'required',
             'crimetime'=> 'required',
             'criminaldateofbirth'=> 'required',
-            'mobilenumber'=> 'required|integer|min:10',
+            'mobilenumber'=> 'required|min:10',
             'zipcode'=> 'required|integer|min:0',
             'crimecity'=> 'required',
             

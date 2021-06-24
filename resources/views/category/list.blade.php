@@ -38,7 +38,7 @@
                 
 
                 <td>
-                    <a class="btn btn-primary" href="{{ route('edit.category', $category->id) }}">Edit</a>
+                    <a class="btn btn-success" href="{{ route('edit.category', $category->id) }}">Edit</a>
                     <a class="btn btn-danger" onclick="return confirm('Are you sure?')"  href="{{ route('delete.category',$category->id) }}">Delete</a>
 {{--                    <a class="btn btn-warning" href="">View</a>--}}
            {{--     <a class="btn btn-success" href="rou }}te('category.all.products',$category->id)}}">View all Prison Cell</a> --}}

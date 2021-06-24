@@ -36,7 +36,7 @@
 
 
 
-<center><h1 >Criminal Report</h1></center>
+<center><h1 style="color: crimson">Criminal Report</h1></center>
 <br>
 
     <div id="printArea" >
